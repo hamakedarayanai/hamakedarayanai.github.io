@@ -11,6 +11,7 @@
   --background-dark: #222;
   --sidebar-bg: #111;
   --link-bg: #444;
+  --link2-bg: #333;
   --link-hover-bg: #666;
   --input-bg: #333;
   --border-color: #555;
@@ -147,6 +148,27 @@ footer {
 }
 
 .link a {
+  font-size: 20px;
+}
+
+/* -----------------------------
+   Optional .link2 Container Styling
+   ----------------------------- */
+
+.link2 {
+  width: 300px;
+  margin: 10px;
+  padding: 10px;
+  border-radius: 10px;
+  background-color: var(--link2-bg);
+  transition: background-color 0.3s ease;
+}
+
+.link2:hover {
+  background-color: var(--link-hover-bg);
+}
+
+.link2 a {
   font-size: 20px;
 }
 
