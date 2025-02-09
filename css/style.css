@@ -123,30 +123,3 @@ footer {
   font-size: 36px;
   cursor: pointer;
 }
-
-/* Whatsapp */
-
-function openWhatsAppChat() {
-      // Retrieve the phone number and message from the form
-      let phoneNumber = document.getElementById("phone").value;
-      let message = document.getElementById("message").value;
-      
-      // Remove non-digit characters from the phone number.
-      // (Ensure the number is in international format without a plus sign.)
-      phoneNumber = phoneNumber.replace(/\D/g, '');
-      
-      // URL-encode the message text
-      let encodedMessage = encodeURIComponent(message);
-      
-      // Construct the WhatsApp URL
-      let url = "https://api.whatsapp.com/send?phone=" + phoneNumber;
-      if (message.trim() !== "") {
-        url += "&text=" + encodedMessage;
-      }
-      
-      // Open the URL in a new tab
-      window.open(url, '_blank');
-      
-      // Prevent default form submission
-      return false;
-    }
