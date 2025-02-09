@@ -145,7 +145,7 @@ footer {
    ----------------------------- */
 
 .link {
-  margin: 10px;
+  margin: auto;
   padding: 10px;
   border-radius: 10px;
   background-color: var(--link-bg);
