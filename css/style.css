@@ -140,7 +140,7 @@ link 2
   margin: 10px;
   padding: 10px;
   border-radius: 10px;
-  background-color: #555;
+  background-color: #444;
 }
 
 .link2:hover {
@@ -158,7 +158,7 @@ link 2
 /* Main form container styling */
 form {
   background-color: #333;                    /* Dark background */
-  border: 1px solid #444;                    /* Subtle border */
+  border: 1px solid #555;                    /* Subtle border */
   border-radius: 10px;                       /* Rounded corners */
   padding: 20px;                             /* Inner spacing */
   margin: 20px auto;                         /* Center horizontally */
