@@ -1,0 +1,125 @@
+/* Add your custom styles here */
+
+/* Remove text-decoration for all links */
+#sidebar a,
+.link a {
+  text-decoration: none;
+}
+
+/* Set color for various elements */
+#showbtn,
+.link a,
+footer,
+h1 {
+  color: #fff;
+}
+
+/* Center align links and heading */
+.link,
+h1 {
+  text-align: center;
+}
+
+/* Set font weight for links and heading */
+.link a,
+h1 {
+  font-weight: 700;
+}
+
+/* Set font family for body and footer */
+body,
+footer {
+  font-family: Helvetica, Arial, sans-serif;
+}
+
+/* Set body styles */
+body {
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Set profile picture styles */
+.profile-picture {
+  margin-top: 20px;
+  border-radius: 50%;
+}
+
+/* Set font size for heading */
+h1 {
+  font-size: 40px;
+}
+
+/* Set styles for link containers */
+.link {
+  width: 300px;
+  margin: 10px;
+  padding: 10px;
+  border-radius: 10px;
+  background-color: #444;
+}
+
+.link:hover {
+  background-color: #666;
+}
+
+/* Set font size for links */
+.link a {
+  font-size: 20px;
+}
+
+/* Set styles for dark theme */
+.dark-theme {
+  background-color: #222;
+  color: #fff;
+}
+
+/* Set font size for footer */
+footer {
+  font-size: 10px;
+}
+
+/* Sidebar menu styles */
+#sidebar {
+  height: 100%;
+  width: 0;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  background-color: #111;
+  overflow-x: hidden;
+  padding-top: 60px;
+  transition: 0.5s;
+}
+
+#closebtn {
+  position: absolute;
+  top: 0;
+  right: 25px;
+  font-size: 36px;
+  margin-left: 50px;
+}
+
+#sidebar a {
+  padding: 8px 8px 8px 32px;
+  font-size: 25px;
+  color: #818181;
+  display: block;
+}
+
+#sidebar a:hover {
+  color: #f1f1f1;
+}
+
+#showbtn {
+  position: fixed;
+  top: 15px;
+  left: 15px;
+  font-size: 36px;
+  cursor: pointer;
+}
+
