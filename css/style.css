@@ -123,3 +123,60 @@ footer {
   font-size: 36px;
   cursor: pointer;
 }
+/* ===== Form Styling within the .link Container ===== */
+.link form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  /* Optional: add some padding for better spacing */
+  padding: 10px;
+}
+
+/* Style the form labels */
+.link form label {
+  font-size: 16px;
+  color: #fff;
+  margin-bottom: 5px;
+}
+
+/* Style the input fields and textarea */
+.link form input,
+.link form textarea {
+  padding: 10px;
+  font-size: 16px;
+  border: none;
+  border-radius: 5px;
+  background-color: #333;
+  color: #fff;
+  resize: vertical; /* Allows vertical resizing for textarea */
+}
+
+/* Placeholder text color */
+.link form input::placeholder,
+.link form textarea::placeholder {
+  color: #bbb;
+}
+
+/* Focus state for inputs and textarea */
+.link form input:focus,
+.link form textarea:focus {
+  outline: none;
+  box-shadow: 0 0 5px rgba(255, 255, 255, 0.5);
+}
+
+/* Style the submit button */
+.link form button {
+  background-color: #555;
+  border: none;
+  border-radius: 5px;
+  padding: 10px;
+  font-size: 18px;
+  color: #fff;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+/* Button hover state */
+.link form button:hover {
+  background-color: #777;
+}
