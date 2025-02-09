@@ -3,16 +3,28 @@ var sidebar = document.getElementById("sidebar");
 var closebtn = document.getElementById("closebtn");
 var showbtn = document.getElementById("showbtn");
 
-// Show sidebar when clicking the show button
-showbtn.addEventListener("click", function(event) {
+// Show sidebar on click or touch
+function openSidebar(event) {
+    event.preventDefault(); // Prevent any default behavior
     sidebar.style.width = "250px";
-    event.stopPropagation(); // Prevent body click event from triggering
+    event.stopPropagation();
+}
+
+showbtn.addEventListener("click", openSidebar);
+showbtn.addEventListener("touchstart", openSidebar);
+
 });
 
-// Hide sidebar when clicking the close button
-closebtn.addEventListener("click", function(event) {
+// Hide sidebar on click or touch
+function closeSidebar(event) {
+    event.preventDefault();
     sidebar.style.width = "0";
     event.stopPropagation();
+}
+
+closebtn.addEventListener("click", closeSidebar);
+closebtn.addEventListener("touchstart", closeSidebar);
+
 });
 
 // Close sidebar when clicking outside of it
