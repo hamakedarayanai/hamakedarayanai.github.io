@@ -18,16 +18,18 @@
         <a href="index.html">Home</a>
         <a href="pages.html">Pages</a>
     </div>
-    <h1>Contact via WhatsApp</h1>
-    <form onsubmit="return openWhatsAppChat();">
-      <label for="phone">Enter Phone Number (International format without "+"):</label>
-      <input type="text" id="phone" name="phone" placeholder="e.g., 15551234567" required>
+    <h1 class="animate__animated animate__fadeInUp">Contact via WhatsApp</h1>
+    <div class="link-container">
+     <form onsubmit="return openWhatsAppChat();">
+        <label for="phone">Enter Phone Number (International format without "+"):</label>
+        <input type="text" id="phone" name="phone" placeholder="e.g., 15551234567" required>
     
-      <label for="message">Optional Message:</label>
-      <textarea id="message" name="message" placeholder="Type your message here..."></textarea>
+        <label for="message">Optional Message:</label>
+        <textarea id="message" name="message" placeholder="Type your message here..."></textarea>
     
-      <button type="submit">Open WhatsApp Chat</button>
-  </form>
+        <button type="submit">Open WhatsApp Chat</button>
+     </form>
+   </div>
   <footer>
         <p id="footer-text" class="animate__animated animate__backInUp"> Hamake D. Arayanai ©2023 </p>
     </footer>
