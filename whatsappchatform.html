@@ -2,62 +2,22 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>WhatsApp Chat Form</title>
-  <style>
-    body {
-      font-family: Arial, sans-serif;
-      margin: 40px;
-    }
-    form {
-      max-width: 400px;
-      margin: auto;
-    }
-    label, input, textarea, button {
-      display: block;
-      width: 100%;
-      margin-bottom: 15px;
-    }
-    button {
-      background-color: #25D366;
-      color: #fff;
-      padding: 10px;
-      border: none;
-      border-radius: 4px;
-      font-size: 16px;
-      cursor: pointer;
-    }
-    button:hover {
-      background-color: #1ebe5d;
-    }
-  </style>
-  <script>
-    function openWhatsAppChat() {
-      // Retrieve the phone number and message from the form
-      let phoneNumber = document.getElementById("phone").value;
-      let message = document.getElementById("message").value;
-      
-      // Remove non-digit characters from the phone number.
-      // (Ensure the number is in international format without a plus sign.)
-      phoneNumber = phoneNumber.replace(/\D/g, '');
-      
-      // URL-encode the message text
-      let encodedMessage = encodeURIComponent(message);
-      
-      // Construct the WhatsApp URL
-      let url = "https://api.whatsapp.com/send?phone=" + phoneNumber;
-      if (message.trim() !== "") {
-        url += "&text=" + encodedMessage;
-      }
-      
-      // Open the URL in a new tab
-      window.open(url, '_blank');
-      
-      // Prevent default form submission
-      return false;
-    }
-  </script>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Hamake D. Arayanai</title>
+    <link rel="icon" type="image/png" href="img/favicon.png">
+    <link rel="stylesheet" href="bootstrap/bootstrap.min.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/animate.min.css">
 </head>
-<body>
+<body class="dark-theme">
+    <!-- Add show button -->
+    <span id="showbtn">☰</span>
+    <!-- Add sidebar menu container -->
+    <div id="sidebar">
+        <span id="closebtn">×</span>
+        <a href="index.html">Home</a>
+        <a href="pages.html">Pages</a>
+    </div>
   <h1>Contact via WhatsApp</h1>
   <form onsubmit="return openWhatsAppChat();">
     <label for="phone">Enter Phone Number (International format without "+"):</label>
