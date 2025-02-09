@@ -128,7 +128,6 @@ footer {
   left: 15px;
   font-size: 36px;
   cursor: pointer;
-  z-index: 1000; /* Ensure it's on top of other elements */
   color: var(--primary-color);
 }
 
