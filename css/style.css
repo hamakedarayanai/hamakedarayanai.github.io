@@ -1,19 +1,38 @@
-/* =======================
-   Global & Base Styles
-   ======================= */
+/* =====================================================
+   Full CSS for Hamake D. Arayanai
+   ===================================================== */
 
-/* Remove text-decoration for all links */
+/* -----------------------------
+   CSS Variables for Easy Maintenance
+   ----------------------------- */
+:root {
+  --primary-color: #fff;
+  --secondary-color: #bbb;
+  --background-dark: #222;
+  --sidebar-bg: #111;
+  --link-bg: #444;
+  --link-hover-bg: #666;
+  --input-bg: #333;
+  --border-color: #555;
+  --hover-bg: #777;
+}
+
+/* -----------------------------
+   Global & Base Styles
+   ----------------------------- */
+
+/* Remove text-decoration for all links in sidebar and link containers */
 #sidebar a,
 .link a {
   text-decoration: none;
 }
 
-/* Set color for various elements */
+/* Set color for show button, links, footer, and headings */
 #showbtn,
 .link a,
 footer,
 h1 {
-  color: #fff;
+  color: var(--primary-color);
 }
 
 /* Center align links and heading */
@@ -34,25 +53,25 @@ footer {
   font-family: Helvetica, Arial, sans-serif;
 }
 
-/* =======================
+/* -----------------------------
    Body & Layout Styling
-   ======================= */
+   ----------------------------- */
 
 body {
   margin: 0;
   padding: 0;
-  min-height: 100vh;             /* Ensure the body fills the viewport */
+  min-height: 100vh; /* Ensure the body fills the viewport */
   display: flex;
   flex-direction: column;
-  justify-content: center;       /* Center content vertically */
-  align-items: center;           /* Center content horizontally */
-  background-color: #222;        /* Dark theme background */
-  color: #fff;
+  justify-content: center; /* Center content vertically */
+  align-items: center;     /* Center content horizontally */
+  background-color: var(--background-dark); /* Dark theme background */
+  color: var(--primary-color);
 }
 
-/* =======================
+/* -----------------------------
    Header & Footer Styling
-   ======================= */
+   ----------------------------- */
 
 /* Set font size for heading */
 h1 {
@@ -64,21 +83,21 @@ footer {
   font-size: 10px;
 }
 
-/* =======================
+/* -----------------------------
    Sidebar Menu Styling
-   ======================= */
+   ----------------------------- */
 
 #sidebar {
   height: 100%;
-  width: 0;
+  width: 0; /* Initially hidden */
   position: fixed;
   z-index: 1;
   top: 0;
   left: 0;
-  background-color: #111;
+  background-color: var(--sidebar-bg);
   overflow-x: hidden;
   padding-top: 60px;
-  transition: 0.5s;
+  transition: width 0.5s ease;
 }
 
 #closebtn {
@@ -87,6 +106,7 @@ footer {
   right: 25px;
   font-size: 36px;
   margin-left: 50px;
+  cursor: pointer;
 }
 
 #sidebar a {
@@ -94,10 +114,11 @@ footer {
   font-size: 25px;
   color: #818181;
   display: block;
+  transition: color 0.3s ease;
 }
 
 #sidebar a:hover {
-  color: #f1f1f1;
+  color: var(--primary-color);
 }
 
 #showbtn {
@@ -108,106 +129,110 @@ footer {
   cursor: pointer;
 }
 
-/* =======================
-   Optional .link Container
-   ======================= */
+/* -----------------------------
+   Optional .link Container Styling
+   ----------------------------- */
 
-/* 
-   If you decide to wrap any elements (such as a form or links) 
-   in a div with the class "link", these styles will apply.
-*/
 .link {
   width: 300px;
   margin: 10px;
   padding: 10px;
   border-radius: 10px;
-  background-color: #444;
+  background-color: var(--link-bg);
+  transition: background-color 0.3s ease;
 }
 
 .link:hover {
-  background-color: #666;
+  background-color: var(--link-hover-bg);
 }
 
 .link a {
   font-size: 20px;
 }
 
-/* =======================
+/* -----------------------------
    Form Styling
-   ======================= */
+   ----------------------------- */
 
-/* Main form container styling */
 form {
-  background-color: #333;                    /* Dark background */
-  border: 1px solid #555;                    /* Subtle border */
-  border-radius: 10px;                       /* Rounded corners */
-  padding: 20px;                             /* Inner spacing */
-  margin: 20px auto;                         /* Center horizontally */
-  max-width: 500px;                          /* Maximum width */
-  width: 90%;                                /* Responsive width */
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);    /* Soft shadow for depth */
-  text-align: center;                        /* Center inline elements (e.g., button text) */
+  background-color: var(--input-bg);       /* Dark background */
+  border: 1px solid var(--border-color);     /* Subtle border */
+  border-radius: 10px;                        /* Rounded corners */
+  padding: 20px;                              /* Inner spacing */
+  margin: 20px auto;                          /* Center horizontally */
+  max-width: 500px;                           /* Maximum width */
+  width: 90%;                                 /* Responsive width */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);     /* Soft shadow for depth */
+  text-align: center;                         /* Center inline elements (e.g., button text) */
 }
 
-/* Style for form labels */
 form label {
-  display: block;                            /* Full-width labels */
+  display: block;     /* Full-width labels */
   margin-bottom: 5px;
-  color: #fff;
+  color: var(--primary-color);
   font-size: 16px;
-  text-align: left;                          /* Left-align label text */
+  text-align: left;   /* Left-align label text */
 }
 
-/* Style for input fields and textarea */
 form input,
 form textarea {
-  width: 100%;                               /* Full width inputs */
+  width: 100%;        /* Full width inputs */
   padding: 10px;
   margin-bottom: 15px;
   border: none;
   border-radius: 5px;
-  background-color: #333;
-  color: #fff;
+  background-color: var(--input-bg);
+  color: var(--primary-color);
   font-size: 16px;
 }
 
-/* Placeholder text styling */
 form input::placeholder,
 form textarea::placeholder {
-  color: #bbb;
+  color: var(--secondary-color);
 }
 
-/* Focus state for inputs and textarea */
 form input:focus,
 form textarea:focus {
   outline: none;
   box-shadow: 0 0 5px rgba(255, 255, 255, 0.5);
 }
 
-/* Style for the submit button */
 form button {
-  background-color: #555;
+  background-color: var(--border-color);
   border: none;
   border-radius: 5px;
   padding: 10px;
   font-size: 18px;
-  color: #fff;
+  color: var(--primary-color);
   cursor: pointer;
   transition: background-color 0.3s ease;
   width: 100%;
 }
 
-/* Hover effect for the submit button */
 form button:hover {
-  background-color: #777;
+  background-color: var(--hover-bg);
 }
 
-/* =======================
-   Profile Picture Styling (if applicable)
-   ======================= */
+/* -----------------------------
+   Profile Picture Styling
+   ----------------------------- */
 
 .profile-picture {
   margin-top: 20px;
   border-radius: 50%;
   width: 250px;
+}
+
+/* -----------------------------
+   Responsive Adjustments
+   ----------------------------- */
+@media (max-width: 600px) {
+  .link {
+    width: 90%;
+    margin: 10px auto;
+  }
+  
+  form {
+    width: 95%;
+  }
 }
