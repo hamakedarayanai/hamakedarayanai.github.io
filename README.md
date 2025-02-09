@@ -1,0 +1,1 @@
+# hamakedarayanai.github.io
