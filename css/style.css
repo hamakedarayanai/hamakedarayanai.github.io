@@ -132,7 +132,6 @@ footer {
   text-align: center;
 }
 
-
 /* -----------------------------
    Optional .link Container Styling
    ----------------------------- */
@@ -187,7 +186,7 @@ form {
   margin: 20px auto;                          /* Center horizontally */
   max-width: 500px;                           /* Maximum width */
   width: 90%;                                 /* Responsive width */
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);     /* Soft shadow for depth */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);    /* Soft shadow for depth */
   text-align: center;                         /* Center inline elements (e.g., button text) */
 }
 
