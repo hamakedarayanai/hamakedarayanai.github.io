@@ -1,7 +1,3 @@
-/* =====================================================
-   Full CSS for Hamake D. Arayanai
-   ===================================================== */
-
 /* -----------------------------
    CSS Variables for Easy Maintenance
    ----------------------------- */
@@ -130,6 +126,12 @@ footer {
   font-size: 36px;
   cursor: pointer;
 }
+
+/* Center the description text */
+#description-text {
+  text-align: center;
+}
+
 
 /* -----------------------------
    Optional .link Container Styling
