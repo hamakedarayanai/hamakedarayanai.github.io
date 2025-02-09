@@ -11,7 +11,7 @@
   // Show sidebar when clicking the show button
   showbtn.addEventListener("click", function(event) {
     sidebar.style.width = "250px";
-    event.stopPropagation(); // Prevent body click event from triggering
+    event.stopPropagation();
   });
 
   // Hide sidebar when clicking the close button
@@ -20,7 +20,7 @@
     event.stopPropagation();
   });
 
-  // Close sidebar when clicking outside of it
+  // Hide sidebar when clicking outside of it
   document.body.addEventListener("click", function(event) {
     if (!sidebar.contains(event.target) && event.target !== showbtn) {
       sidebar.style.width = "0";
@@ -32,50 +32,41 @@
     event.stopPropagation();
   });
 
-  // Keyboard accessibility for sidebar
+  // Keyboard accessibility for sidebar (close on Escape)
   document.addEventListener("keydown", function(event) {
     if (event.key === "Escape") {
-      sidebar.style.width = "0"; // Close sidebar on "Esc"
-    }
-
-    // Handle Tab key navigation within the sidebar if it's open
-    if (event.key === "Tab" && sidebar.style.width === "250px") {
-      event.preventDefault(); // Prevent default tab behavior
-      const links = sidebar.getElementsByTagName("a");
-      let index = Array.prototype.indexOf.call(links, document.activeElement);
-
-      // Move focus to the next or previous link based on Shift key state
-      index = event.shiftKey ? index - 1 : index + 1;
-      index = (index + links.length) % links.length; // Wrap-around using modulo
-      links[index].focus();
+      sidebar.style.width = "0";
     }
   });
 
   // -----------------------------
   // WhatsApp Chat Functionality
   // -----------------------------
-  // Expose the function globally if needed (e.g., for an onclick attribute in HTML)
+  // This function will be called when the form is submitted.
+  // It retrieves the input values, builds the WhatsApp URL,
+  // and opens the chat in a new tab.
   window.openWhatsAppChat = function() {
-    let phoneNumber = document.getElementById("phone").value.trim();
-    let message = document.getElementById("message").value.trim();
-
-    // Ensure phone number is in international format by stripping non-digit characters
-    phoneNumber = phoneNumber.replace(/\D/g, '');
-
-    if (!phoneNumber) {
+    // Retrieve and sanitize the phone number and message values from the form
+    const phone = document.getElementById("phone").value.trim().replace(/\D/g, '');
+    const message = document.getElementById("message").value.trim();
+    
+    // Check if the phone number is provided
+    if (!phone) {
       alert("Please enter a valid phone number.");
       return false;
     }
-
-    // Construct the WhatsApp API URL with the phone number and optional message
-    let url = "https://api.whatsapp.com/send?phone=" + phoneNumber;
+    
+    // Build the WhatsApp URL using WhatsApp's API
+    let url = "https://wa.me/" + encodeURIComponent(phone);
     if (message) {
-      url += "&text=" + encodeURIComponent(message);
+      url += "?text=" + encodeURIComponent(message);
     }
-
-    // Open the WhatsApp chat in a new tab
-    window.open(url, '_blank');
-    return false; // Prevent form submission if this is triggered by a form
+    
+    // Open the URL in a new tab/window
+    window.open(url, "_blank");
+    
+    // Prevent the form from submitting in the traditional way
+    return false;
   };
 
 })();
