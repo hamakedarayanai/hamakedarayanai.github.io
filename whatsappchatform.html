@@ -3,10 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="WhatsApp Chat Form for Hamake D. Arayanai's website.">
-  <meta name="keywords" content="Hamake D. Arayanai, WhatsApp, chat form">
-  <meta name="author" content="Hamake D. Arayanai">
-  <title>Hamake D. Arayanai - WhatsApp Chat Form</title>
+  <title>Hamake D. Arayanai</title>
   <link rel="icon" type="image/png" href="img/favicon.png">
   <link rel="stylesheet" href="bootstrap/bootstrap.min.css">
   <link rel="stylesheet" href="css/style.css">
@@ -14,32 +11,29 @@
 </head>
 <body class="dark-theme">
   <!-- Add show button -->
-  <button id="showbtn" aria-label="Open sidebar">☰</button>
+  <span id="showbtn">☰</span>
   
   <!-- Add sidebar menu container -->
-  <nav id="sidebar" aria-label="Sidebar">
-    <button id="closebtn" aria-label="Close sidebar">×</button>
+  <div id="sidebar">
+    <span id="closebtn">×</span>
     <a href="index.html">Home</a>
     <a href="pages.html">Pages</a>
-  </nav>
+  </div>
   
-  <!-- Main content -->
-  <main>
-    <h1 class="animate__animated animate__fadeInUp">WhatsApp Chat Form</h1>
-    <section class="link-container">
-      <form class="link2 animate__animated animate__flipInX" onsubmit="return openWhatsAppChat();">
-        <label class="animate__animated animate__flipInX" for="phone">Enter Phone Number:</label>
-        <input type="text" id="phone" name="phone" placeholder="e.g., 15551234567" required>
-        
-        <label class="animate__animated animate__flipInX" for="message">Optional Message:</label>
-        <textarea id="message" name="message" placeholder="Type your message here..."></textarea>
-        
-        <button type="submit">Open WhatsApp Chat</button>
-      </form>
-    </section>
-  </main>
+  <h1 class="animate__animated animate__fadeInUp">Whatsapp Chat Form</h1>
   
-  <!-- Footer -->
+  <div class="link-container">
+    <form class="link2 animate__animated animate__flipInX" onsubmit="return openWhatsAppChat();">
+      <label class="animate__animated animate__flipInX" for="phone">Enter Phone Number:</label>
+      <input type="text" id="phone" name="phone" placeholder="e.g., 15551234567" required>
+  
+      <label class="animate__animated animate__flipInX" for="message">Optional Message:</label>
+      <textarea id="message" name="message" placeholder="Type your message here..."></textarea>
+  
+      <button type="submit">Open WhatsApp Chat</button>
+    </form>
+  </div>
+  
   <footer>
     <p id="footer-text" class="animate__animated animate__backInUp">Hamake D. Arayanai ©2025</p>
   </footer>
@@ -49,5 +43,32 @@
   <script src="bootstrap/bootstrap.min.js"></script>
   <!-- Add custom JavaScript for sidebar menu -->
   <script src="js/script.js"></script>
+  
+  <!-- Inline JavaScript for WhatsApp Chat Form -->
+  <script>
+    function openWhatsAppChat() {
+      // Retrieve the phone number and message values from the form
+      const phone = document.getElementById("phone").value.trim();
+      const message = document.getElementById("message").value.trim();
+      
+      // Check if the phone number is provided
+      if (!phone) {
+        alert("Please enter a valid phone number.");
+        return false;
+      }
+      
+      // Build the WhatsApp URL using WhatsApp's API
+      let url = "https://wa.me/" + encodeURIComponent(phone);
+      if (message) {
+        url += "?text=" + encodeURIComponent(message);
+      }
+      
+      // Open the URL in a new tab/window
+      window.open(url, "_blank");
+      
+      // Prevent the form from submitting in the traditional way
+      return false;
+    }
+  </script>
 </body>
 </html>
