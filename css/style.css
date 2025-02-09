@@ -132,6 +132,25 @@ footer {
   font-size: 20px;
 }
 
+/*
+link 2 
+*/ 
+.link2 {
+  width: 300px;
+  margin: 10px;
+  padding: 10px;
+  border-radius: 10px;
+  background-color: #555;
+}
+
+.link2:hover {
+  background-color: #666;
+}
+
+.link2 a {
+  font-size: 20px;
+}
+
 /* =======================
    Form Styling
    ======================= */
