@@ -8,6 +8,8 @@
   --sidebar-bg: #111;
   --link-bg: #444;
   --link-hover-bg: #666;
+  --chat-bg: #444;
+  --chat-hover-bg: #666;
   --input-bg: #333;
   --border-color: #555;
   --hover-bg: #777;
@@ -157,6 +159,26 @@ footer {
 }
 
 .link a {
+  font-size: 20px;
+}
+
+/* -----------------------------
+   Optional .link Container Styling
+   ----------------------------- */
+
+.chat {
+  margin: auto;
+  padding: 10px;
+  border-radius: 10px;
+  background-color: var(--link-bg);
+  transition: background-color 0.3s ease;
+}
+
+.chat:hover {
+  background-color: var(--link-hover-bg);
+}
+
+.chat a {
   font-size: 20px;
 }
 
