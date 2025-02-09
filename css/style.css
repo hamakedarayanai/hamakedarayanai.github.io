@@ -1,206 +1,262 @@
-/* ========================================
-   Global Reset & Base Styles
-   ======================================== */
+/* -----------------------------
+   CSS Variables for Easy Maintenance
+   ----------------------------- */
+:root {
+  --primary-color: #fff;
+  --secondary-color: #bbb;
+  --background-dark: #222;
+  --sidebar-bg: #111;
+  --link-bg: #444;
+  --link2-bg: #333;
+  --link-hover-bg: #666;
+  --link2-hover-bg: #555;
+  --input-bg: #333;
+  --border-color: #555;
+  --hover-bg: #777;
+}
 
-* {
+/* -----------------------------
+   Global & Base Styles
+   ----------------------------- */
+
+/* Remove text-decoration for all links in sidebar and link containers */
+#sidebar a,
+.link a {
+  text-decoration: none;
+}
+
+/* Set color for show button, links, footer, and headings */
+#showbtn,
+.link a,
+footer,
+h1 {
+  color: var(--primary-color);
+}
+
+/* Center align links and heading */
+.link,
+h1 {
+  text-align: center;
+}
+
+/* Set font weight for links and heading */
+.link a,
+h1 {
+  font-weight: 700;
+}
+
+/* Set font family for body and footer */
+body,
+footer {
+  font-family: Helvetica, Arial, sans-serif;
+}
+
+/* -----------------------------
+   Body & Layout Styling
+   ----------------------------- */
+
+body {
   margin: 0;
   padding: 0;
-  box-sizing: border-box;
+  min-height: 100vh; /* Ensure the body fills the viewport */
+  display: flex;
+  flex-direction: column;
+  justify-content: center; /* Center content vertically */
+  align-items: center;     /* Center content horizontally */
+  background-color: var(--background-dark); /* Dark theme background */
+  color: var(--primary-color);
 }
 
-body.dark-theme {
-  background-color: #121212;
-  color: #e0e0e0;
-  font-family: Arial, sans-serif;
-  line-height: 1.6;
+/* -----------------------------
+   Header & Footer Styling
+   ----------------------------- */
+
+/* Set font size for heading */
+h1 {
+  font-size: 40px;
 }
 
-/* ========================================
-   Sidebar Styles
-   ======================================== */
+/* Set font size for footer */
+footer {
+  font-size: 10px;
+}
+
+/* -----------------------------
+   Sidebar Menu Styling
+   ----------------------------- */
 
 #sidebar {
+  height: 100%;
+  width: 0; /* Initially hidden */
   position: fixed;
+  z-index: 1;
   top: 0;
   left: 0;
-  width: 0; /* Hidden by default */
-  height: 100%;
-  background-color: #333;
+  background-color: var(--sidebar-bg);
   overflow-x: hidden;
-  transition: width 0.3s ease;
   padding-top: 60px;
-  z-index: 1000;
+  transition: width 0.5s ease;
+}
+
+#closebtn {
+  position: absolute;
+  top: 0;
+  right: 25px;
+  font-size: 36px;
+  margin-left: 50px;
+  cursor: pointer;
 }
 
 #sidebar a {
-  padding: 12px 8px 12px 32px;
-  text-decoration: none;
-  font-size: 20px;
-  color: #f1f1f1;
+  padding: 8px 8px 8px 32px;
+  font-size: 25px;
+  color: #818181;
   display: block;
-  transition: background-color 0.3s ease;
+  transition: color 0.3s ease;
 }
 
 #sidebar a:hover {
-  background-color: #575757;
+  color: var(--primary-color);
 }
 
-/* Close button inside sidebar */
-#closebtn {
-  position: absolute;
-  top: 20px;
-  right: 25px;
-  font-size: 36px;
-  cursor: pointer;
-  color: #f1f1f1;
-}
-
-/* Show button (hamburger) */
 #showbtn {
-  font-size: 30px;
-  cursor: pointer;
   position: fixed;
   top: 15px;
   left: 15px;
-  color: #ffffff;
-  z-index: 1100;
+  font-size: 36px;
+  cursor: pointer;
 }
 
-/* ========================================
-   Header, Images & Main Content
-   ======================================== */
-
-/* Profile image (or page-specific image) */
-.profile-picture {
-  display: block;
-  margin: 20px auto;
-  max-width: 150px;
-  border-radius: 50%;
-}
-
-/* Main headings */
-h1 {
-  text-align: center;
-  margin: 20px 0 10px 0;
-}
-
-/* Description or subheading text */
+/* Center the description text */
 #description-text {
   text-align: center;
-  margin: 0 auto 20px auto;
-  max-width: 600px;
-  font-size: 1.1rem;
 }
 
-/* ========================================
-   Link Container & Button Styles
-   ======================================== */
+/* -----------------------------
+   Optional .link Container Styling
+   ----------------------------- */
 
-/* Container for social media/contact links */
-.link-container {
-  display: flex;
-  justify-content: center;
-  flex-wrap: wrap;
-  gap: 15px;
-  margin: 20px;
-}
-
-/* Each link block */
 .link {
+  width: 300px;
   margin: 10px;
-}
-
-/* Link styling (buttons) */
-.link a {
-  text-decoration: none;
-  color: #fff;
-  background-color: #1E90FF;
-  padding: 10px 20px;
-  border-radius: 5px;
+  padding: 10px;
+  border-radius: 10px;
+  background-color: var(--link-bg);
   transition: background-color 0.3s ease;
 }
 
-.link a:hover {
-  background-color: #0b6aa1;
+.link:hover {
+  background-color: var(--link-hover-bg);
 }
 
-/* ========================================
-   Footer Styles
-   ======================================== */
-
-footer {
-  text-align: center;
-  padding: 15px;
-  background-color: #222;
-  color: #ccc;
-  font-size: 0.9rem;
-  position: fixed;
-  bottom: 0;
-  width: 100%;
+.link a {
+  font-size: 20px;
 }
 
-/* ========================================
-   Form Styles (For WhatsApp Chat Form)
-   ======================================== */
+/* -----------------------------
+   Optional .link2 Container Styling
+   ----------------------------- */
+
+.link2 {
+  width: 300px;
+  margin: 10px;
+  padding: 10px;
+  border-radius: 10px;
+  background-color: var(--link2-bg);
+  transition: background-color 0.3s ease;
+}
+
+.link2:hover {
+  background-color: var(--link2-hover-bg);
+}
+
+.link2 a {
+  font-size: 20px;
+}
+
+/* -----------------------------
+   Form Styling
+   ----------------------------- */
 
 form {
-  max-width: 500px;
-  margin: 30px auto;
-  padding: 20px;
-  background-color: #222;
-  border-radius: 8px;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+  background-color: var(--input-bg);       /* Dark background */
+  border: 1px solid var(--border-color);     /* Subtle border */
+  border-radius: 10px;                        /* Rounded corners */
+  padding: 20px;                              /* Inner spacing */
+  margin: 20px auto;                          /* Center horizontally */
+  max-width: 500px;                           /* Maximum width */
+  width: 90%;                                 /* Responsive width */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);    /* Soft shadow for depth */
+  text-align: center;                         /* Center inline elements (e.g., button text) */
 }
 
 form label {
-  display: block;
+  display: block;     /* Full-width labels */
   margin-bottom: 5px;
-  font-weight: bold;
+  color: var(--primary-color);
+  font-size: 16px;
+  text-align: left;   /* Left-align label text */
 }
 
-form input[type="text"],
+form input,
 form textarea {
-  width: 100%;
+  width: 100%;        /* Full width inputs */
   padding: 10px;
   margin-bottom: 15px;
-  border: 1px solid #444;
-  border-radius: 4px;
-  background-color: #333;
-  color: #fff;
+  border: none;
+  border-radius: 5px;
+  background-color: var(--input-bg);
+  color: var(--primary-color);
+  font-size: 16px;
+}
+
+form input::placeholder,
+form textarea::placeholder {
+  color: var(--secondary-color);
+}
+
+form input:focus,
+form textarea:focus {
+  outline: none;
+  box-shadow: 0 0 5px rgba(255, 255, 255, 0.5);
 }
 
 form button {
-  background-color: #1E90FF;
+  background-color: var(--border-color);
   border: none;
-  padding: 10px 20px;
   border-radius: 5px;
-  color: #fff;
+  padding: 10px;
+  font-size: 18px;
+  color: var(--primary-color);
   cursor: pointer;
   transition: background-color 0.3s ease;
+  width: 100%;
 }
 
 form button:hover {
-  background-color: #0b6aa1;
+  background-color: var(--hover-bg);
 }
 
-/* ========================================
-   Responsive & Utility Classes
-   ======================================== */
+/* -----------------------------
+   Profile Picture Styling
+   ----------------------------- */
 
-/* Center container utility */
-.center {
-  display: block;
-  margin-left: auto;
-  margin-right: auto;
+.profile-picture {
+  margin-top: 20px;
+  border-radius: 50%;
+  width: 250px;
 }
 
-/* Responsive image */
-img {
-  max-width: 100%;
-  height: auto;
+/* -----------------------------
+   Responsive Adjustments
+   ----------------------------- */
+@media (max-width: 600px) {
+  .link {
+    width: 90%;
+    margin: 10px auto;
+  }
+  
+  form {
+    width: 95%;
+  }
 }
-
-/* Utility spacing classes */
-.mt-20 { margin-top: 20px; }
-.mb-20 { margin-bottom: 20px; }
-.p-20  { padding: 20px; }
