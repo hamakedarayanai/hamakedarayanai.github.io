@@ -1,4 +1,6 @@
-/* Add your custom styles here */
+/* =======================
+   Global & Base Styles
+   ======================= */
 
 /* Remove text-decoration for all links */
 #sidebar a,
@@ -32,50 +34,29 @@ footer {
   font-family: Helvetica, Arial, sans-serif;
 }
 
-/* Set body styles */
+/* =======================
+   Body & Layout Styling
+   ======================= */
+
 body {
   margin: 0;
   padding: 0;
+  min-height: 100vh;             /* Ensure the body fills the viewport */
   display: flex;
   flex-direction: column;
-  justify-content: center;
-  align-items: center;
+  justify-content: center;       /* Center content vertically */
+  align-items: center;           /* Center content horizontally */
+  background-color: #222;        /* Dark theme background */
+  color: #fff;
 }
 
-/* Set profile picture styles */
-.profile-picture {
-  margin-top: 20px;
-  border-radius: 50%;
-  width: 250px;
-}
+/* =======================
+   Header & Footer Styling
+   ======================= */
 
 /* Set font size for heading */
 h1 {
   font-size: 40px;
-}
-
-/* Set styles for link containers */
-.link {
-  width: 300px;
-  margin: 10px;
-  padding: 10px;
-  border-radius: 10px;
-  background-color: #444;
-}
-
-.link:hover {
-  background-color: #666;
-}
-
-/* Set font size for links */
-.link a {
-  font-size: 20px;
-}
-
-/* Set styles for dark theme */
-.dark-theme {
-  background-color: #222;
-  color: #fff;
 }
 
 /* Set font size for footer */
@@ -83,7 +64,10 @@ footer {
   font-size: 10px;
 }
 
-/* Sidebar menu styles */
+/* =======================
+   Sidebar Menu Styling
+   ======================= */
+
 #sidebar {
   height: 100%;
   width: 0;
@@ -123,59 +107,107 @@ footer {
   font-size: 36px;
   cursor: pointer;
 }
-/* ===== Form Styling ===== */
+
+/* =======================
+   Optional .link Container
+   ======================= */
+
+/* 
+   If you decide to wrap any elements (such as a form or links) 
+   in a div with the class "link", these styles will apply.
+*/
+.link {
+  width: 300px;
+  margin: 10px;
+  padding: 10px;
+  border-radius: 10px;
+  background-color: #444;
+}
+
+.link:hover {
+  background-color: #666;
+}
+
+.link a {
+  font-size: 20px;
+}
+
+/* =======================
+   Form Styling
+   ======================= */
+
+/* Main form container styling */
 form {
-  background-color: #333;         /* Dark background for the form */
-  border: 1px solid #444;         /* Subtle border */
-  border-radius: 10px;            /* Rounded corners */
-  padding: 20px;                  /* Inner spacing */
-  margin: 20px auto;              /* Center form with margin */
-  max-width: 500px;               /* Limit maximum width */
-  width: 90%;                     /* Responsive width */
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); /* Soft shadow for depth */
+  background-color: #333;                    /* Dark background */
+  border: 1px solid #444;                    /* Subtle border */
+  border-radius: 10px;                       /* Rounded corners */
+  padding: 20px;                             /* Inner spacing */
+  margin: 20px auto;                         /* Center horizontally */
+  max-width: 500px;                          /* Maximum width */
+  width: 90%;                                /* Responsive width */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);    /* Soft shadow for depth */
+  text-align: center;                        /* Center inline elements (e.g., button text) */
 }
 
 /* Style for form labels */
 form label {
-  display: block;               /* Ensure labels take full width */
-  margin-bottom: 5px;           /* Spacing below each label */
-  color: #fff;                  /* White text color */
-  font-size: 16px;              /* Readable font size */
+  display: block;                            /* Full-width labels */
+  margin-bottom: 5px;
+  color: #fff;
+  font-size: 16px;
+  text-align: left;                          /* Left-align label text */
 }
 
 /* Style for input fields and textarea */
 form input,
 form textarea {
-  width: 100%;                  /* Full width within form */
-  padding: 10px;                /* Inner padding for comfort */
-  margin-bottom: 15px;          /* Space between fields */
-  border: none;                 /* Remove default borders */
-  border-radius: 5px;           /* Rounded corners */
-  background-color: #444;       /* Match overall dark theme */
-  color: #fff;                  /* White text for readability */
-  font-size: 16px;              /* Consistent font size */
+  width: 100%;                               /* Full width inputs */
+  padding: 10px;
+  margin-bottom: 15px;
+  border: none;
+  border-radius: 5px;
+  background-color: #444;
+  color: #fff;
+  font-size: 16px;
 }
 
 /* Placeholder text styling */
 form input::placeholder,
 form textarea::placeholder {
-  color: #bbb;                  /* Lighter shade for placeholders */
+  color: #bbb;
+}
+
+/* Focus state for inputs and textarea */
+form input:focus,
+form textarea:focus {
+  outline: none;
+  box-shadow: 0 0 5px rgba(255, 255, 255, 0.5);
 }
 
 /* Style for the submit button */
 form button {
-  background-color: #555;       /* Button background color */
-  border: none;                 /* Remove default border */
-  border-radius: 5px;           /* Rounded corners */
-  padding: 10px;                /* Comfortable padding */
-  font-size: 18px;              /* Clear, readable text */
-  color: #fff;                  /* White text color */
-  cursor: pointer;              /* Pointer cursor on hover */
-  transition: background-color 0.3s ease;  /* Smooth hover effect */
-  width: 100%;                  /* Button takes full width */
+  background-color: #555;
+  border: none;
+  border-radius: 5px;
+  padding: 10px;
+  font-size: 18px;
+  color: #fff;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  width: 100%;
 }
 
 /* Hover effect for the submit button */
 form button:hover {
-  background-color: #777;       /* Slightly lighter on hover */
+  background-color: #777;
+}
+
+/* =======================
+   Profile Picture Styling (if applicable)
+   ======================= */
+
+.profile-picture {
+  margin-top: 20px;
+  border-radius: 50%;
+  width: 250px;
 }
