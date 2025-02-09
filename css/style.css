@@ -13,6 +13,7 @@
   --link-bg: #444;
   --link2-bg: #333;
   --link-hover-bg: #666;
+  --link2-hover-bg: #555;
   --input-bg: #333;
   --border-color: #555;
   --hover-bg: #777;
@@ -165,7 +166,7 @@ footer {
 }
 
 .link2:hover {
-  background-color: var(--link-hover-bg);
+  background-color: var(--link2-hover-bg);
 }
 
 .link2 a {
