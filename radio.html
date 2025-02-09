@@ -3,7 +3,10 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Hamake D. Arayanai</title>
+  <meta name="description" content="Streaming Radio Al-Fatah Trangkil Temboro.">
+  <meta name="keywords" content="Hamake D. Arayanai, radio, streaming">
+  <meta name="author" content="Hamake D. Arayanai">
+  <title>Hamake D. Arayanai - Radios</title>
   <link rel="icon" type="image/png" href="img/favicon.png">
   <link rel="stylesheet" href="bootstrap/bootstrap.min.css">
   <link rel="stylesheet" href="css/style.css">
@@ -11,26 +14,30 @@
 </head>
 <body class="dark-theme">
   <!-- Add show button -->
-  <span id="showbtn">☰</span>
+  <button id="showbtn" aria-label="Open sidebar">☰</button>
   
   <!-- Add sidebar menu container -->
-  <div id="sidebar">
-    <span id="closebtn">×</span>
+  <nav id="sidebar" aria-label="Sidebar">
+    <button id="closebtn" aria-label="Close sidebar">×</button>
     <a href="index.html">Home</a>
     <a href="pages.html">Pages</a>
-  </div>
+  </nav>
   
-  <h1 class="animate__animated animate__fadeInUp">Radios</h1>
-  <p id="description-text" class="animate__animated animate__flipInX">
-    Streaming Radio Al-Fatah Trangkil Temboro
-  </p>
+  <!-- Main content -->
+  <main>
+    <h1 class="animate__animated animate__fadeInUp">Radios</h1>
+    <p id="description-text" class="animate__animated animate__flipInX">
+      Streaming Radio Al-Fatah Trangkil Temboro
+    </p>
+    
+    <section>
+      <audio autoplay controls name="media">
+        <source src="https://i.klikhost.com/8228/;stream.mp3" type="audio/mpeg">
+      </audio>
+    </section>
+  </main>
   
-  <div>
-    <audio autoplay="autoplay" controls="controls" name="media">
-      <source src="https://i.klikhost.com/8228/;stream.mp3" type="audio/mpeg">
-    </audio>
-  </div>
-  
+  <!-- Footer -->
   <footer>
     <p id="footer-text" class="animate__animated animate__backInUp">
       Hamake D. Arayanai ©2025
