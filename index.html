@@ -3,9 +3,6 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Hamake D. Arayanai's personal website. Love me or just hate me but spare me with your indifference.">
-  <meta name="keywords" content="Hamake D. Arayanai, personal website, portfolio, social media">
-  <meta name="author" content="Hamake D. Arayanai">
   <title>Hamake D. Arayanai</title>
   <link rel="icon" type="image/png" href="img/favicon.png">
   <link rel="stylesheet" href="bootstrap/bootstrap.min.css">
@@ -14,26 +11,24 @@
 </head>
 <body class="dark-theme">
   <!-- Add show button -->
-  <button id="showbtn" aria-label="Open sidebar">☰</button>
+  <span id="showbtn">☰</span>
 
   <!-- Add sidebar menu container -->
-  <nav id="sidebar" aria-label="Sidebar">
-    <button id="closebtn" aria-label="Close sidebar">×</button>
+  <div id="sidebar">
+    <span id="closebtn">×</span>
     <a href="index.html">Home</a>
     <a href="pages.html">Pages</a>
-  </nav>
+  </div>
 
   <!-- Profile picture and heading -->
-  <header>
-    <img src="img/profile-picture.png" alt="Profile Picture" class="profile-picture animate__animated animate__fadeInDown">
-    <h1 class="animate__animated animate__fadeInUp">Hamake D. Arayanai</h1>
-    <p id="description-text" class="animate__animated animate__flipInX">
-      Love me or just hate me but spare me with your indifference
-    </p>
-  </header>
+  <img src="img/profile-picture.png" alt="Profile Picture" class="profile-picture animate__animated animate__fadeInDown">
+  <h1 class="animate__animated animate__fadeInUp">Hamake D. Arayanai</h1>
+  <p id="description-text" class="animate__animated animate__flipInX">
+    Love me or just hate me but spare me with your indifference
+  </p>
 
   <!-- Social media links -->
-  <section class="link-container">
+  <div class="link-container">
     <div class="link animate__animated animate__fadeInRight">
       <a href="https://www.facebook.com/hamakedarayanai/" target="_blank" rel="noopener noreferrer">Facebook</a>
     </div>
@@ -64,7 +59,7 @@
     <div class="link animate__animated animate__fadeInLeft">
       <a href="https://www.tiktok.com/@hamakedarayanai" target="_blank" rel="noopener noreferrer">TikTok</a>
     </div>
-  </section>
+  </div>
 
   <!-- Footer -->
   <footer>
