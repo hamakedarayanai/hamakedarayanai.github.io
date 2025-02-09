@@ -46,6 +46,7 @@ body {
 .profile-picture {
   margin-top: 20px;
   border-radius: 50%;
+  width: 300px;
 }
 
 /* Set font size for heading */
