@@ -229,7 +229,9 @@ form button:hover {
    ----------------------------- */
 
 .profile-picture {
-  margin-top: 20px;
+  margin: 20px auto 0 auto;
+  display: block;
   border-radius: 50%;
   width: 250px;
 }
+
