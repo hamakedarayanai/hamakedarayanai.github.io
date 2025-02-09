@@ -1,206 +1,79 @@
-/* ========================================
-   Global Reset & Base Styles
-   ======================================== */
+// Get the sidebar element
+var sidebar = document.getElementById("sidebar");
 
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
+// Get the close button element
+var closebtn = document.getElementById("closebtn");
+
+// Get the show button element
+var showbtn = document.getElementById("showbtn");
+
+// Add a click event listener to the close button
+closebtn.addEventListener("click", function() {
+    // Toggle between hiding and showing the sidebar using a ternary operator
+    sidebar.style.width = sidebar.style.width === "250px" ? "0" : "250px";
+});
+
+// Add a click event listener to the show button
+showbtn.addEventListener("click", function() {
+    // Show the sidebar
+    sidebar.style.width = "250px";
+});
+
+// Add a click event listener to the document body
+document.body.addEventListener("click", function(event) {
+    // Check if the click was outside the sidebar and its toggle buttons
+    if (event.target !== sidebar && event.target !== closebtn && event.target !== showbtn) {
+        // Hide the sidebar
+        sidebar.style.width = "0";
+    }
+});
+
+// Add a keydown event listener to the document for keyboard accessibility
+document.addEventListener("keydown", function(event) {
+    // Check if the Esc key was pressed (key code 27)
+    if (event.keyCode === 27) {
+        // Hide the sidebar
+        sidebar.style.width = "0";
+    }
+    // Check if the Tab key was pressed (key code 9)
+    if (event.keyCode === 9) {
+        // Prevent the default behavior of tabbing through elements
+        event.preventDefault();
+        // Get all the links in the sidebar
+        var links = sidebar.getElementsByTagName("a");
+        // Get the index of the currently focused link
+        var index = Array.prototype.indexOf.call(links, document.activeElement);
+        // Increment or decrement the index depending on whether the Shift key is held
+        index = event.shiftKey ? index - 1 : index + 1;
+        // Wrap around the index if it goes out of bounds
+        index = (index + links.length) % links.length;
+        // Focus on the next or previous link
+        links[index].focus();
+    }
+});
+
+/* WhatsApp Chat Functionality */
+function openWhatsAppChat() {
+    // Retrieve the phone number and message from the form
+    let phoneNumber = document.getElementById("phone").value;
+    let message = document.getElementById("message").value;
+    
+    // Remove non-digit characters from the phone number
+    // (Ensure the number is in international format without a plus sign.)
+    phoneNumber = phoneNumber.replace(/\D/g, '');
+    
+    // URL-encode the message text
+    let encodedMessage = encodeURIComponent(message);
+    
+    // Construct the WhatsApp URL
+    let url = "https://api.whatsapp.com/send?phone=" + phoneNumber;
+    if (message.trim() !== "") {
+        url += "&text=" + encodedMessage;
+    }
+    
+    // Open the URL in a new tab
+    window.open(url, '_blank');
+    
+    // Prevent default form submission
+    return false;
 }
-
-body.dark-theme {
-  background-color: #121212;
-  color: #e0e0e0;
-  font-family: Arial, sans-serif;
-  line-height: 1.6;
-}
-
-/* ========================================
-   Sidebar Styles
-   ======================================== */
-
-#sidebar {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 0; /* Hidden by default */
-  height: 100%;
-  background-color: #333;
-  overflow-x: hidden;
-  transition: width 0.3s ease;
-  padding-top: 60px;
-  z-index: 1000;
-}
-
-#sidebar a {
-  padding: 12px 8px 12px 32px;
-  text-decoration: none;
-  font-size: 20px;
-  color: #f1f1f1;
-  display: block;
-  transition: background-color 0.3s ease;
-}
-
-#sidebar a:hover {
-  background-color: #575757;
-}
-
-/* Close button inside sidebar */
-#closebtn {
-  position: absolute;
-  top: 20px;
-  right: 25px;
-  font-size: 36px;
-  cursor: pointer;
-  color: #f1f1f1;
-}
-
-/* Show button (hamburger) */
-#showbtn {
-  font-size: 30px;
-  cursor: pointer;
-  position: fixed;
-  top: 15px;
-  left: 15px;
-  color: #ffffff;
-  z-index: 1100;
-}
-
-/* ========================================
-   Header, Images & Main Content
-   ======================================== */
-
-/* Profile image (or page-specific image) */
-.profile-picture {
-  display: block;
-  margin: 20px auto;
-  max-width: 150px;
-  border-radius: 50%;
-}
-
-/* Main headings */
-h1 {
-  text-align: center;
-  margin: 20px 0 10px 0;
-}
-
-/* Description or subheading text */
-#description-text {
-  text-align: center;
-  margin: 0 auto 20px auto;
-  max-width: 600px;
-  font-size: 1.1rem;
-}
-
-/* ========================================
-   Link Container & Button Styles
-   ======================================== */
-
-/* Container for social media/contact links */
-.link-container {
-  display: flex;
-  justify-content: center;
-  flex-wrap: wrap;
-  gap: 15px;
-  margin: 20px;
-}
-
-/* Each link block */
-.link {
-  margin: 10px;
-}
-
-/* Link styling (buttons) */
-.link a {
-  text-decoration: none;
-  color: #fff;
-  background-color: #1E90FF;
-  padding: 10px 20px;
-  border-radius: 5px;
-  transition: background-color 0.3s ease;
-}
-
-.link a:hover {
-  background-color: #0b6aa1;
-}
-
-/* ========================================
-   Footer Styles
-   ======================================== */
-
-footer {
-  text-align: center;
-  padding: 15px;
-  background-color: #222;
-  color: #ccc;
-  font-size: 0.9rem;
-  position: fixed;
-  bottom: 0;
-  width: 100%;
-}
-
-/* ========================================
-   Form Styles (For WhatsApp Chat Form)
-   ======================================== */
-
-form {
-  max-width: 500px;
-  margin: 30px auto;
-  padding: 20px;
-  background-color: #222;
-  border-radius: 8px;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
-}
-
-form label {
-  display: block;
-  margin-bottom: 5px;
-  font-weight: bold;
-}
-
-form input[type="text"],
-form textarea {
-  width: 100%;
-  padding: 10px;
-  margin-bottom: 15px;
-  border: 1px solid #444;
-  border-radius: 4px;
-  background-color: #333;
-  color: #fff;
-}
-
-form button {
-  background-color: #1E90FF;
-  border: none;
-  padding: 10px 20px;
-  border-radius: 5px;
-  color: #fff;
-  cursor: pointer;
-  transition: background-color 0.3s ease;
-}
-
-form button:hover {
-  background-color: #0b6aa1;
-}
-
-/* ========================================
-   Responsive & Utility Classes
-   ======================================== */
-
-/* Center container utility */
-.center {
-  display: block;
-  margin-left: auto;
-  margin-right: auto;
-}
-
-/* Responsive image */
-img {
-  max-width: 100%;
-  height: auto;
-}
-
-/* Utility spacing classes */
-.mt-20 { margin-top: 20px; }
-.mb-20 { margin-bottom: 20px; }
-.p-20  { padding: 20px; }
