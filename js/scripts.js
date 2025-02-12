@@ -7,29 +7,22 @@ document.addEventListener('DOMContentLoaded', function () {
 
       const phoneInput = document.getElementById('phone');
       const messageInput = document.getElementById('message');
-
       const phone = phoneInput.value.trim();
       const message = messageInput.value.trim();
 
       // Remove existing error message if present
-      const existingError = phoneInput.parentNode.querySelector('.invalid-feedback');
-      if (existingError) existingError.remove();
+      phoneInput.classList.remove("is-invalid");
+      const errorElement = phoneInput.parentNode.querySelector('.invalid-feedback');
+      if (errorElement) errorElement.style.display = 'none';
 
       if (!isValidPhoneNumber(phone)) {
         phoneInput.classList.add("is-invalid");
-
-        // Create error message
-        const errorElement = document.createElement('div');
-        errorElement.className = 'invalid-feedback';
-        errorElement.textContent = 'Please enter a valid phone number (including country code).';
-        phoneInput.parentNode.insertBefore(errorElement, phoneInput.nextSibling);
+        errorElement.style.display = 'block';
         return;
-      } else {
-        phoneInput.classList.remove("is-invalid");
       }
 
       // Build WhatsApp URL
-      let whatsappURL = `https://wa.me/${phone}`;
+      let whatsappURL = `https://wa.me/${phone.replace(/\D/g, '')}`;
       if (message) {
         whatsappURL += `?text=${encodeURIComponent(message)}`;
       }
@@ -39,11 +32,11 @@ document.addEventListener('DOMContentLoaded', function () {
     });
   }
 
-  // Validate phone number using libphonenumber-js (assuming full international format)
+  // Validate phone number using libphonenumber-js
   function isValidPhoneNumber(phoneNumber) {
     try {
       const parsedNumber = libphonenumber.parsePhoneNumber(phoneNumber);
-      return parsedNumber.isValid();
+      return parsedNumber && parsedNumber.isValid();
     } catch (error) {
       return false;
     }
