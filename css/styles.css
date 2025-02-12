@@ -1,5 +1,131 @@
-body { font-family: 'Poppins', sans-serif; transition: background 0.3s, color 0.3s; }
-body.dark-theme { background-color: #121212; color: #b0b0b0; }
-.hero-section { background: linear-gradient(to right, #232526, #414345); padding: 80px 0; color: white; text-align: center; }
-.btn { transition: transform 0.3s ease-in-out, filter 0.3s; background-color: #333333; color: #ffffff; border: 2px solid #444444; }
-.btn:hover { transform: scale(1.05); filter: brightness(90%); background-color: #222222; }
+/* Global Styles */
+body {
+  font-family: 'Poppins', sans-serif;
+  transition: background 0.3s, color 0.3s;
+}
+
+/* Dark Theme */
+body.dark-theme {
+  background-color: #121212;
+  color: #cccccc; /* Improved contrast */
+}
+
+/* Navbar */
+.navbar {
+  background-color: #1a1a1a;
+  border-bottom: 2px solid #333;
+}
+
+.navbar-brand {
+  font-weight: bold;
+  color: #ffffff !important;
+}
+
+.navbar-nav .nav-link {
+  color: #bbbbbb;
+  transition: color 0.3s ease-in-out;
+}
+
+.navbar-nav .nav-link:hover,
+.navbar-nav .nav-link.active {
+  color: #ffffff;
+}
+
+/* Hero Section */
+.hero-section {
+  background: linear-gradient(to right, #232526, #414345);
+  padding: 80px 0;
+  color: white;
+  text-align: center;
+}
+
+.hero-section h1 {
+  font-size: 2.5rem;
+  font-weight: 700;
+}
+
+.hero-section p {
+  font-size: 1.2rem;
+}
+
+/* Form Container */
+.form-container {
+  max-width: 500px;
+  margin: 0 auto;
+  background: #1e1e1e;
+  padding: 30px;
+  border-radius: 8px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+.form-label {
+  font-weight: 600;
+}
+
+.form-control {
+  background: #222;
+  border: 1px solid #444;
+  color: #fff;
+}
+
+.form-control::placeholder {
+  color: #777;
+}
+
+.form-control:focus {
+  background: #1a1a1a;
+  color: #fff;
+  border-color: #666;
+  box-shadow: none;
+}
+
+/* Error Handling */
+.is-invalid {
+  border-color: #dc3545 !important;
+}
+
+.invalid-feedback {
+  color: #dc3545;
+}
+
+/* Buttons */
+.btn {
+  transition: transform 0.3s ease-in-out, filter 0.3s;
+  background-color: #333333;
+  color: #ffffff;
+  border: 2px solid #444444;
+}
+
+.btn:hover {
+  transform: scale(1.05);
+  filter: brightness(90%);
+  background-color: #222222;
+}
+
+/* Footer */
+footer {
+  background-color: #1a1a1a;
+  color: #999;
+  padding: 15px;
+  font-size: 0.9rem;
+  border-top: 2px solid #333;
+}
+
+footer p {
+  margin: 0;
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+  .hero-section {
+    padding: 60px 20px;
+  }
+
+  .hero-section h1 {
+    font-size: 2rem;
+  }
+
+  .hero-section p {
+    font-size: 1rem;
+  }
+}
