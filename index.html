@@ -3,76 +3,75 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Home | Hamake D. Arayanai</title>
-  <meta name="description" content="Hamake D. Arayanai official website. Connect through social media, explore pages, and more.">
+  <title>Hamake D. Arayanai | Official Website</title>
+  <meta name="description" content="Explore the official website of Hamake D. Arayanai. Connect on social media and discover more.">
+  <meta name="keywords" content="Hamake D. Arayanai, official website, social media, content creator">
+  <meta name="author" content="Hamake D. Arayanai">
+  <meta property="og:title" content="Hamake D. Arayanai">
+  <meta property="og:description" content="Connect through social media and explore pages.">
+  <meta property="og:image" content="img/profile-picture.png">
+  <meta property="og:url" content="https://bootstrap.hamakedarayanai.my.id">
+  <meta name="bootstrap:card" content="summary_large_image">
   <link rel="icon" type="image/png" href="img/favicon.png">
-  <link rel="stylesheet" href="bootstrap/bootstrap.min.css">
-  <link rel="stylesheet" href="css/style.css">
-  <link rel="stylesheet" href="css/animate.min.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;700&display=swap">
+  <style>
+    body { font-family: 'Poppins', sans-serif; transition: background 0.3s, color 0.3s; }
+    body.dark-theme { background-color: #121212; color: #ffffff; }
+    .hero-section { background: linear-gradient(to right, #6a11cb, #2575fc); padding: 100px 0; color: white; text-align: center; }
+    .profile-picture { width: 150px; height: 150px; object-fit: cover; border-radius: 50%; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); }
+    .btn { transition: transform 0.3s ease-in-out; }
+    .btn:hover { transform: scale(1.05); filter: brightness(90%); }
+    .theme-toggle { position: fixed; top: 20px; right: 20px; cursor: pointer; }
+  </style>
 </head>
 <body class="dark-theme">
-  <!-- Sidebar toggle element -->
-  <span id="showbtn">☰</span>
-
-  <!-- Sidebar menu container -->
-  <div id="sidebar">
-    <span id="closebtn">×</span>
-    <a href="index.html">Home</a>
-    <a href="pages.html">Pages</a>
-    <a href="sites.html">Sites</a>
-  </div>
-
-  <!-- Page Content -->
-  <div>
-    <img src="img/profile-picture.png" alt="Profile picture of Hamake D. Arayanai" class="profile-picture animate__animated animate__fadeInDown">
-    <h1 class="animate__animated animate__fadeInUp">Hamake D. Arayanai</h1>
-    <p id="description-text" class="animate__animated animate__flipInX">
-      Love me or just hate me but spare me with your indifference
-    </p>
-
-    <!-- Social media links -->
-    <div class="link-container">
-      <div class="link animate__animated animate__fadeInRight">
-        <a href="https://www.facebook.com/hamakedarayanai/" target="_blank" rel="noopener noreferrer">Facebook</a>
-      </div>
-      <div class="link animate__animated animate__fadeInLeft">
-        <a href="https://x.com/hamakedarayanai" target="_blank" rel="noopener noreferrer">X</a>
-      </div>
-      <div class="link animate__animated animate__fadeInRight">
-        <a href="https://www.instagram.com/hamakedarayanai/" target="_blank" rel="noopener noreferrer">Instagram</a>
-      </div>
-      <div class="link animate__animated animate__fadeInLeft">
-        <a href="https://hamakedarayanai.wordpress.com/" target="_blank" rel="noopener noreferrer">Wordpress</a>
-      </div>
-      <div class="link animate__animated animate__fadeInRight">
-        <a href="https://www.youtube.com/@hamakedarayanai" target="_blank" rel="noopener noreferrer">Youtube</a>
-      </div>
-      <div class="link animate__animated animate__fadeInLeft">
-        <a href="https://id.linkedin.com/in/hamakedarayanai" target="_blank" rel="noopener noreferrer">LinkedIn</a>
-      </div>
-      <div class="link animate__animated animate__fadeInRight">
-        <a href="https://id.pinterest.com/hamakedarayanai/" target="_blank" rel="noopener noreferrer">Pinterest</a>
-      </div>
-      <div class="link animate__animated animate__fadeInLeft">
-        <a href="https://www.flickr.com/people/hamakedarayanai/" target="_blank" rel="noopener noreferrer">Flickr</a>
-      </div>
-      <div class="link animate__animated animate__fadeInRight">
-        <a href="https://medium.com/@hamakedarayanai" target="_blank" rel="noopener noreferrer">Medium</a>
-      </div>
-      <div class="link animate__animated animate__fadeInLeft">
-        <a href="https://www.tiktok.com/@hamakedarayanai" target="_blank" rel="noopener noreferrer">TikTok</a>
+  <button class="btn btn-light theme-toggle" onclick="toggleTheme()" aria-label="Toggle Theme">🌙</button>
+  
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark shadow-sm">
+    <div class="container">
+      <a class="navbar-brand fw-bold" href="index.html">Hamake D. Arayanai</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+          <li class="nav-item"><a class="nav-link" href="pages.html">Pages</a></li>
+        </ul>
       </div>
     </div>
+  </nav>
+  
+  <div class="hero-section">
+    <img src="img/profile-picture.png" alt="Profile picture" class="profile-picture" loading="lazy">
+    <h1 class="mt-3">Hamake D. Arayanai</h1>
+    <p class="lead">Love me or hate me, but spare me your indifference.</p>
   </div>
-
-  <!-- Footer -->
-  <footer>
-    <p id="footer-text" class="animate__animated animate__backInUp">Hamake D. Arayanai ©2025</p>
+  
+  <div class="container text-center mt-5">
+    <div class="row mt-4 justify-content-center">
+      <div class="col-md-3 col-sm-4 mb-3"><a href="https://www.facebook.com/hamakedarayanai/" class="btn btn-outline-primary w-100" target="_blank">Facebook</a></div>
+      <div class="col-md-3 col-sm-4 mb-3"><a href="https://x.com/hamakedarayanai" class="btn btn-outline-dark w-100" target="_blank">X</a></div>
+      <div class="col-md-3 col-sm-4 mb-3"><a href="https://www.instagram.com/hamakedarayanai/" class="btn btn-outline-danger w-100" target="_blank">Instagram</a></div>
+      <div class="col-md-3 col-sm-4 mb-3"><a href="https://www.youtube.com/@hamakedarayanai" class="btn btn-outline-danger w-100" target="_blank">YouTube</a></div>
+      <div class="col-md-3 col-sm-4 mb-3"><a href="https://www.linkedin.com/in/hamakedarayanai" class="btn btn-outline-info w-100" target="_blank">LinkedIn</a></div>
+      <div class="col-md-3 col-sm-4 mb-3"><a href="https://www.tiktok.com/@hamakedarayanai" class="btn btn-outline-primary w-100" target="_blank">TikTok</a></div>
+    </div>
+  </div>
+  
+  <footer class="bg-dark text-white text-center py-3 mt-5 shadow-sm">
+    <p>&copy; 2025 Hamake D. Arayanai | All Rights Reserved</p>
   </footer>
-
-  <!-- Scripts -->
-  <script src="js/jquery-3.7.1.min.js" defer></script>
-  <script src="bootstrap/bootstrap.min.js" defer></script>
-  <script src="js/script.js" defer></script>
+  
+  <script>
+    function toggleTheme() {
+      document.body.classList.toggle('dark-theme');
+      document.querySelector('.theme-toggle').textContent = document.body.classList.contains('dark-theme') ? '🌙' : '☀️';
+    }
+  </script>
+  
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" defer></script>
 </body>
 </html>

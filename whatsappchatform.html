@@ -5,49 +5,92 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>WhatsApp Chat Form | Hamake D. Arayanai</title>
   <meta name="description" content="Start a WhatsApp chat directly from Hamake D. Arayanai website using our chat form.">
+  <meta name="keywords" content="WhatsApp chat, contact form, instant messaging, Hamake D. Arayanai">
+  <meta name="author" content="Hamake D. Arayanai">
+  <meta property="og:title" content="WhatsApp Chat Form | Hamake D. Arayanai">
+  <meta property="og:description" content="Instantly connect via WhatsApp with a custom message.">
+  <meta property="og:url" content="https://bootstrap.hamakedarayanai.my.id/whatsappchatform.html">
+  <meta name="bootstrap:card" content="summary_large_image">
   <link rel="icon" type="image/png" href="img/favicon.png">
-  <link rel="stylesheet" href="bootstrap/bootstrap.min.css">
-  <link rel="stylesheet" href="css/style.css">
-  <link rel="stylesheet" href="css/animate.min.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;700&display=swap">
+  <style>
+    body { font-family: 'Poppins', sans-serif; transition: background 0.3s, color 0.3s; }
+    body.dark-theme { background-color: #121212; color: #ffffff; }
+    .hero-section { background: linear-gradient(to right, #25D366, #128C7E); padding: 80px 0; color: white; text-align: center; }
+    .btn { transition: transform 0.3s ease-in-out, filter 0.3s; }
+    .btn:hover { transform: scale(1.05); filter: brightness(90%); }
+    .theme-toggle { position: fixed; top: 20px; right: 20px; cursor: pointer; }
+    .form-container { max-width: 500px; margin: auto; padding: 20px; background: #f8f9fa; border-radius: 10px; box-shadow: 0px 4px 6px rgba(0,0,0,0.1); }
+  </style>
 </head>
 <body class="dark-theme">
-  <!-- Sidebar toggle element -->
-  <span id="showbtn">☰</span>
-
-  <!-- Sidebar menu container -->
-  <div id="sidebar">
-    <span id="closebtn">×</span>
-    <a href="index.html">Home</a>
-    <a href="pages.html">Pages</a>
-    <a href="sites.html">Sites</a>
+  <button class="btn btn-light theme-toggle" onclick="toggleTheme()" aria-label="Toggle Theme">🌙</button>
+  
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark shadow-sm">
+    <div class="container">
+      <a class="navbar-brand fw-bold" href="index.html">Hamake D. Arayanai</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+          <li class="nav-item"><a class="nav-link" href="pages.html">Pages</a></li>
+          <li class="nav-item"><a class="nav-link active" href="whatsappchatform.html">WhatsApp Chat</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+  
+  <div class="hero-section">
+    <h1>WhatsApp Chat Form</h1>
+    <p class="lead">Instantly connect with WhatsApp using a custom message.</p>
   </div>
-
-  <!-- Page Content -->
-  <div>
-    <h1 class="animate__animated animate__fadeInUp">WhatsApp Chat Form</h1>
-
-    <!-- Chat form -->
-    <div class="link-container">
-       <form class="animate__animated animate__flipInX" onsubmit="return openWhatsAppChat();">
-          <label class="animate__animated animate__flipInX" for="phone">Enter Phone Number:</label>
-          <input type="text" id="phone" name="phone" placeholder="e.g., 15551234567" required>
-
-          <label class="animate__animated animate__flipInX" for="message">Optional Message:</label>
-          <textarea id="message" name="message" placeholder="Type your message here..."></textarea>
-
-          <button type="submit">Open WhatsApp Chat</button>
-       </form>
+  
+  <div class="container text-center mt-5">
+    <div class="form-container">
+      <form id="whatsappForm">
+        <div class="mb-3">
+          <label for="phone" class="form-label">Enter Phone Number:</label>
+          <input type="text" id="phone" name="phone" class="form-control" placeholder="e.g., 6281234567890" required pattern="\d+">
+          <div class="invalid-feedback">Please enter a valid phone number.</div>
+        </div>
+        <div class="mb-3">
+          <label for="message" class="form-label">Optional Message:</label>
+          <textarea id="message" name="message" class="form-control" placeholder="Type your message here..."></textarea>
+        </div>
+        <button type="submit" class="btn btn-success w-100">Open WhatsApp Chat</button>
+      </form>
     </div>
   </div>
-
-  <!-- Footer -->
-  <footer>
-    <p id="footer-text" class="animate__animated animate__backInUp">Hamake D. Arayanai ©2025</p>
+  
+  <footer class="bg-dark text-white text-center py-3 mt-5 shadow-sm">
+    <p>&copy; 2025 Hamake D. Arayanai | All Rights Reserved</p>
   </footer>
-
-  <!-- Scripts -->
-  <script src="js/jquery-3.7.1.min.js" defer></script>
-  <script src="bootstrap/bootstrap.min.js" defer></script>
-  <script src="js/script.js" defer></script>
+  
+  <script>
+    function toggleTheme() {
+      document.body.classList.toggle('dark-theme');
+      document.querySelector('.theme-toggle').textContent = document.body.classList.contains('dark-theme') ? '🌙' : '☀️';
+    }
+    document.getElementById('whatsappForm').addEventListener('submit', function(event) {
+      event.preventDefault();
+      let phone = document.getElementById('phone');
+      let message = document.getElementById('message').value.trim();
+      if (!phone.checkValidity()) {
+        phone.classList.add("is-invalid");
+        return;
+      }
+      let whatsappURL = `https://wa.me/${phone.value.trim()}`;
+      if (message) {
+        whatsappURL += `?text=${encodeURIComponent(message)}`;
+      }
+      window.open(whatsappURL, '_blank');
+    });
+  </script>
+  
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" defer></script>
 </body>
 </html>

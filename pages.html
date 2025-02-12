@@ -4,51 +4,74 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Pages | Hamake D. Arayanai</title>
-  <meta name="description" content="List of pages by Hamake D. Arayanai including services and more.">
+  <meta name="description" content="Explore the various pages and services offered by Hamake D. Arayanai.">
+  <meta name="keywords" content="Hamake D. Arayanai, services, radio, chat form, website sections">
+  <meta name="author" content="Hamake D. Arayanai">
+  <meta property="og:title" content="Pages | Hamake D. Arayanai">
+  <meta property="og:description" content="Discover different pages and services available on the website.">
+  <meta property="og:url" content="https://bootstrap.hamakedarayanai.my.id/pages.html">
+  <meta name="bootstrap:card" content="summary_large_image">
   <link rel="icon" type="image/png" href="img/favicon.png">
-  <link rel="stylesheet" href="bootstrap/bootstrap.min.css">
-  <link rel="stylesheet" href="css/style.css">
-  <link rel="stylesheet" href="css/animate.min.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;700&display=swap">
+  <style>
+    body { font-family: 'Poppins', sans-serif; transition: background 0.3s, color 0.3s; }
+    body.dark-theme { background-color: #121212; color: #ffffff; }
+    .hero-section { background: linear-gradient(to right, #ff7eb3, #ff758c); padding: 80px 0; color: white; text-align: center; }
+    .btn { transition: transform 0.3s ease-in-out, filter 0.3s; }
+    .btn:hover { transform: scale(1.05); filter: brightness(90%); }
+    .theme-toggle { position: fixed; top: 20px; right: 20px; cursor: pointer; }
+  </style>
 </head>
 <body class="dark-theme">
-  <!-- Sidebar toggle element -->
-  <span id="showbtn">☰</span>
-
-  <!-- Sidebar menu container -->
-  <div id="sidebar">
-    <span id="closebtn">×</span>
-    <a href="index.html">Home</a>
-    <a href="pages.html">Pages</a>
-    <a href="sites.html">Sites</a>
+  <button class="btn btn-light theme-toggle" onclick="toggleTheme()" aria-label="Toggle Theme">🌙</button>
+  
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark shadow-sm">
+    <div class="container">
+      <a class="navbar-brand fw-bold" href="index.html">Hamake D. Arayanai</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+          <li class="nav-item"><a class="nav-link active" href="pages.html">Pages</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+  
+  <div class="hero-section">
+    <h1>Explore Our Pages</h1>
+    <p class="lead">Discover the different sections of our website.</p>
   </div>
-
-  <!-- Page Content -->
-  <div>
-    <h1 class="animate__animated animate__fadeInUp">Pages</h1>
-    <p id="description-text" class="animate__animated animate__flipInX">List Of Pages</p>
-
-    <!-- Pages links -->
-    <div class="link-container">
-      <div class="link animate__animated animate__fadeInRight">
-        <a href="harapanbaruservice.html">Harapan Baru Service</a>
+  
+  <div class="container text-center mt-5">
+    <div class="row mt-4 justify-content-center">
+      <div class="col-md-4 col-sm-6 mb-3">
+        <a href="harapanbaruservice.html" class="btn btn-outline-primary w-100">Harapan Baru Service</a>
       </div>
-      <div class="link animate__animated animate__fadeInLeft">
-        <a href="radio.html">Radio</a>
+      <div class="col-md-4 col-sm-6 mb-3">
+        <a href="radio.html" class="btn btn-outline-secondary w-100">Radio</a>
       </div>
-      <div class="link animate__animated animate__fadeInRight">
-        <a href="whatsappchatform.html">Whatsapp Chat Form</a>
+      <div class="col-md-4 col-sm-6 mb-3">
+        <a href="whatsappchatform.html" class="btn btn-outline-success w-100">WhatsApp Chat Form</a>
       </div>
     </div>
   </div>
-
-  <!-- Footer -->
-  <footer>
-    <p id="footer-text" class="animate__animated animate__backInUp">Hamake D. Arayanai ©2025</p>
+  
+  <footer class="bg-dark text-white text-center py-3 mt-5 shadow-sm">
+    <p>&copy; 2025 Hamake D. Arayanai | All Rights Reserved</p>
   </footer>
-
-  <!-- Scripts -->
-  <script src="js/jquery-3.7.1.min.js" defer></script>
-  <script src="bootstrap/bootstrap.min.js" defer></script>
-  <script src="js/script.js" defer></script>
+  
+  <script>
+    function toggleTheme() {
+      document.body.classList.toggle('dark-theme');
+      document.querySelector('.theme-toggle').textContent = document.body.classList.contains('dark-theme') ? '🌙' : '☀️';
+    }
+  </script>
+  
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" defer></script>
 </body>
 </html>
