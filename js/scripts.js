@@ -27,7 +27,7 @@ document.addEventListener('DOMContentLoaded', function() {
   }
 
   function isValidPhoneNumber(phoneNumber) {
-    const phoneRegex = /^\d{8,}$/; // Customize this regex!
+    const phoneRegex = /^\+?[1-9]\d{7,14}$/; // Customize this regex!
     return phoneRegex.test(phoneNumber);
   }
 
