@@ -1,131 +1,154 @@
-/* Global Styles */
+/* === General Styles === */
 body {
   font-family: 'Poppins', sans-serif;
   transition: background 0.3s, color 0.3s;
 }
-
-/* Dark Theme */
 body.dark-theme {
   background-color: #121212;
-  color: #cccccc; /* Improved contrast */
+  color: #b0b0b0;
 }
 
-/* Navbar */
+/* === Navbar === */
 .navbar {
-  background-color: #1a1a1a;
-  border-bottom: 2px solid #333;
+  padding: 15px;
 }
-
 .navbar-brand {
+  font-size: 1.5rem;
   font-weight: bold;
-  color: #ffffff !important;
+  animation: fadeInDown 0.8s ease-in-out;
 }
-
 .navbar-nav .nav-link {
-  color: #bbbbbb;
   transition: color 0.3s ease-in-out;
 }
-
 .navbar-nav .nav-link:hover,
 .navbar-nav .nav-link.active {
-  color: #ffffff;
+  color: #f8f9fa;
 }
 
-/* Hero Section */
+/* === Hero Section === */
 .hero-section {
   background: linear-gradient(to right, #232526, #414345);
-  padding: 80px 0;
-  color: white;
+  padding: 80px 20px;
   text-align: center;
+  color: white;
+  animation: fadeIn 1s ease-in-out;
 }
-
-.hero-section h1 {
-  font-size: 2.5rem;
-  font-weight: 700;
-}
-
-.hero-section p {
-  font-size: 1.2rem;
-}
-
-/* Form Container */
-.form-container {
-  max-width: 500px;
+.profile-picture {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  object-fit: cover;
+  display: block;
   margin: 0 auto;
-  background: #1e1e1e;
-  padding: 30px;
-  border-radius: 8px;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+  animation: zoomIn 1s ease-in-out;
+}
+.hero-section h1 {
+  font-size: 2.2rem;
+  font-weight: bold;
+  animation: slideInFromLeft 1s ease-in-out;
+}
+.hero-section p {
+  font-size: 1.1rem;
+  color: #ddd;
+  animation: slideInFromRight 1s ease-in-out;
 }
 
-.form-label {
-  font-weight: 600;
-}
-
-.form-control {
-  background: #222;
-  border: 1px solid #444;
-  color: #fff;
-}
-
-.form-control::placeholder {
-  color: #777;
-}
-
-.form-control:focus {
-  background: #1a1a1a;
-  color: #fff;
-  border-color: #666;
-  box-shadow: none;
-}
-
-/* Error Handling */
-.is-invalid {
-  border-color: #dc3545 !important;
-}
-
-.invalid-feedback {
-  color: #dc3545;
-}
-
-/* Buttons */
+/* === Social Media Buttons === */
 .btn {
   transition: transform 0.3s ease-in-out, filter 0.3s;
-  background-color: #333333;
-  color: #ffffff;
-  border: 2px solid #444444;
+  background-color: #333;
+  color: #fff;
+  border: 2px solid #444;
 }
-
 .btn:hover {
   transform: scale(1.05);
   filter: brightness(90%);
-  background-color: #222222;
+  background-color: #222;
+}
+.btn-outline-secondary {
+  border-color: #666;
+  color: #ccc;
+  transition: background 0.3s, transform 0.3s;
+  animation: fadeInUp 1.2s ease-in-out;
+}
+.btn-outline-secondary:hover {
+  background: #444;
+  color: #fff;
+  transform: scale(1.05);
 }
 
-/* Footer */
+/* === Form Styles === */
+.form-container {
+  background: #1e1e1e;
+  padding: 30px;
+  border-radius: 8px;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3);
+  max-width: 500px;
+  margin: auto;
+  animation: fadeInUp 1s ease-in-out;
+}
+.form-label {
+  font-weight: 600;
+  color: #ddd;
+}
+.form-control {
+  background: #333;
+  border: 1px solid #555;
+  color: #fff;
+}
+.form-control::placeholder {
+  color: #888;
+}
+.form-control:focus {
+  border-color: #777;
+  background: #444;
+  animation: pulse 0.3s ease-in-out;
+}
+
+/* === Footer === */
 footer {
-  background-color: #1a1a1a;
-  color: #999;
+  background: #121212;
+  color: #bbb;
+  text-align: center;
   padding: 15px;
-  font-size: 0.9rem;
-  border-top: 2px solid #333;
+  margin-top: 40px;
+  box-shadow: 0px -2px 5px rgba(0, 0, 0, 0.2);
+  animation: fadeIn 1.2s ease-in-out;
 }
 
-footer p {
-  margin: 0;
+/* === Keyframe Animations === */
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
 }
 
-/* Responsive Styles */
-@media (max-width: 768px) {
-  .hero-section {
-    padding: 60px 20px;
-  }
+@keyframes fadeInDown {
+  from { opacity: 0; transform: translateY(-20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
 
-  .hero-section h1 {
-    font-size: 2rem;
-  }
+@keyframes fadeInUp {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
 
-  .hero-section p {
-    font-size: 1rem;
-  }
+@keyframes zoomIn {
+  from { transform: scale(0.8); opacity: 0; }
+  to { transform: scale(1); opacity: 1; }
+}
+
+@keyframes slideInFromLeft {
+  from { transform: translateX(-30px); opacity: 0; }
+  to { transform: translateX(0); opacity: 1; }
+}
+
+@keyframes slideInFromRight {
+  from { transform: translateX(30px); opacity: 0; }
+  to { transform: translateX(0); opacity: 1; }
+}
+
+@keyframes pulse {
+  0% { transform: scale(1); }
+  50% { transform: scale(1.02); }
+  100% { transform: scale(1); }
 }
