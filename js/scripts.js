@@ -1,50 +1,37 @@
-document.addEventListener('DOMContentLoaded', function () {
-  // WhatsApp Form Handling
-  const whatsappForm = document.getElementById('whatsappForm');
-  if (whatsappForm) {
-    whatsappForm.addEventListener('submit', function (event) {
-      event.preventDefault();
-
-      const phoneInput = document.getElementById('phone');
-      const messageInput = document.getElementById('message');
-      const phone = phoneInput.value.trim();
-      const message = messageInput.value.trim();
-
-      // Remove existing error message if present
-      phoneInput.classList.remove("is-invalid");
-      const errorElement = phoneInput.parentNode.querySelector('.invalid-feedback');
-      if (errorElement) errorElement.style.display = 'none';
-
-      if (!isValidPhoneNumber(phone)) {
-        phoneInput.classList.add("is-invalid");
-        errorElement.style.display = 'block';
-        return;
-      }
-
-      // Build WhatsApp URL
-      let whatsappURL = `https://wa.me/${phone.replace(/\D/g, '')}`;
-      if (message) {
-        whatsappURL += `?text=${encodeURIComponent(message)}`;
-      }
-
-      // Open WhatsApp chat in new tab
-      window.open(whatsappURL, '_blank');
-    });
-  }
-
-  // Validate phone number using libphonenumber-js
-  function isValidPhoneNumber(phoneNumber) {
-    try {
-      const parsedNumber = libphonenumber.parsePhoneNumber(phoneNumber);
-      return parsedNumber && parsedNumber.isValid();
-    } catch (error) {
-      return false;
-    }
-  }
-
-  // Current Year in Footer
+document.addEventListener("DOMContentLoaded", function () {
+  // Set current year in footer
   const currentYearSpan = document.getElementById("currentYear");
   if (currentYearSpan) {
     currentYearSpan.textContent = new Date().getFullYear();
+  }
+
+  // Smooth scrolling for internal links
+  document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+    anchor.addEventListener("click", function (e) {
+      e.preventDefault();
+      const targetId = this.getAttribute("href").substring(1);
+      const targetElement = document.getElementById(targetId);
+
+      if (targetElement) {
+        window.scrollTo({
+          top: targetElement.offsetTop - 70, // Adjust for navbar height
+          behavior: "smooth",
+        });
+      }
+    });
+  });
+
+  // Optional: Dark mode toggle (if needed in the future)
+  const toggleDarkMode = document.getElementById("darkModeToggle");
+  if (toggleDarkMode) {
+    toggleDarkMode.addEventListener("click", function () {
+      document.body.classList.toggle("dark-theme");
+      localStorage.setItem("theme", document.body.classList.contains("dark-theme") ? "dark" : "light");
+    });
+
+    // Load saved theme preference
+    if (localStorage.getItem("theme") === "light") {
+      document.body.classList.remove("dark-theme");
+    }
   }
 });
