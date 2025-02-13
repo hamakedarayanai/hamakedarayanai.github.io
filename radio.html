@@ -7,52 +7,77 @@
   <meta name="description" content="Listen to Streaming Radio Al-Fatah Trangkil Temboro on Hamake D. Arayanai website.">
   <meta name="keywords" content="radio streaming, Al-Fatah Trangkil Temboro, online radio, Hamake D. Arayanai">
   <meta name="author" content="Hamake D. Arayanai">
+  
+  <!-- Open Graph / Facebook -->
   <meta property="og:title" content="Radio | Hamake D. Arayanai">
   <meta property="og:description" content="Tune in to Streaming Radio Al-Fatah Trangkil Temboro.">
   <meta property="og:url" content="https://hamakedarayanai.my.id/radio.html">
+  <meta property="og:type" content="website">
+  
+  <!-- Twitter -->
   <meta name="twitter:card" content="summary_large_image">
+  
+  <!-- Favicon -->
   <link rel="icon" type="image/png" href="img/favicon.png">
+  
+  <!-- CSS -->
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;700&display=swap">
   <link rel="stylesheet" href="css/styles.css">
+  
+  <!-- Structured Data -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "WebPage",
+    "name": "Radio",
+    "url": "https://hamakedarayanai.my.id/radio.html",
+    "description": "Streaming Radio Al-Fatah Trangkil Temboro on Hamake D. Arayanai website."
+  }
+  </script>
 </head>
 <body class="dark-theme">
-  
-  <nav class="navbar navbar-expand-lg navbar-dark bg-dark shadow-sm">
-    <div class="container">
-      <a class="navbar-brand fw-bold" href="index.html">Hamake D. Arayanai</a>
-      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-      </button>
-      <div class="collapse navbar-collapse" id="navbarNav">
-        <ul class="navbar-nav ms-auto">
-          <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
-          <li class="nav-item"><a class="nav-link" href="pages.html">Pages</a></li>
-          <li class="nav-item"><a class="nav-link active" href="radio.html">Radio</a></li>
-        </ul>
+  <header>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark shadow-sm" role="navigation">
+      <div class="container">
+        <a class="navbar-brand fw-bold" href="index.html">Hamake D. Arayanai</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" 
+                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav ms-auto">
+            <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+            <li class="nav-item"><a class="nav-link" href="pages.html">Pages</a></li>
+            <li class="nav-item"><a class="nav-link active" href="radio.html">Radio</a></li>
+          </ul>
+        </div>
       </div>
-    </div>
-  </nav>
+    </nav>
+  </header>
   
-  <div class="hero-section">
-    <h1>Streaming Radio</h1>
-    <p class="lead">Listen to Radio Al-Fatah Trangkil Temboro</p>
-  </div>
-  
-  <div class="container text-center mt-5">
-    <div class="audio-container">
-      <audio controls class="w-100" aria-label="Streaming Radio Al-Fatah Trangkil Temboro">
-        <source src="https://i.klikhost.com/8228/;stream.mp3" type="audio/mpeg">
-        Your browser does not support the audio element.
-      </audio>
-    </div>
-  </div>
+  <main>
+    <section class="hero-section">
+      <h1>Streaming Radio</h1>
+      <p class="lead">Listen to Radio Al-Fatah Trangkil Temboro</p>
+    </section>
+    
+    <section class="container text-center mt-5">
+      <div class="audio-container">
+        <audio controls class="w-100" aria-label="Streaming Radio Al-Fatah Trangkil Temboro">
+          <source src="https://i.klikhost.com/8228/;stream.mp3" type="audio/mpeg">
+          Your browser does not support the audio element.
+        </audio>
+      </div>
+    </section>
+  </main>
   
   <footer class="bg-dark text-white text-center py-3 mt-5 shadow-sm">
     <p>&copy; <span id="currentYear"></span> Hamake D. Arayanai | All Rights Reserved</p>
   </footer>
   
+  <!-- JavaScript -->
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" defer></script>
   <script src="js/scripts.js" defer></script>
 </body>

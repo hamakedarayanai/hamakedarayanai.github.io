@@ -7,62 +7,88 @@
   <meta name="description" content="Start a WhatsApp chat directly from Hamake D. Arayanai website using our chat form.">
   <meta name="keywords" content="WhatsApp chat, contact form, instant messaging, Hamake D. Arayanai">
   <meta name="author" content="Hamake D. Arayanai">
+  
+  <!-- Open Graph / Facebook -->
   <meta property="og:title" content="WhatsApp Chat Form | Hamake D. Arayanai">
   <meta property="og:description" content="Instantly connect via WhatsApp with a custom message.">
   <meta property="og:url" content="https://hamakedarayanai.my.id/whatsappchatform.html">
+  <meta property="og:type" content="website">
+  
+  <!-- Twitter -->
   <meta name="twitter:card" content="summary_large_image">
+  
+  <!-- Favicon -->
   <link rel="icon" type="image/png" href="img/favicon.png">
+  
+  <!-- CSS -->
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;700&display=swap">
   <link rel="stylesheet" href="css/styles.css">
+  
+  <!-- Structured Data -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "WebPage",
+    "name": "WhatsApp Chat Form",
+    "url": "https://hamakedarayanai.my.id/whatsappchatform.html",
+    "description": "Start a WhatsApp chat directly from Hamake D. Arayanai website using our chat form."
+  }
+  </script>
 </head>
 <body class="dark-theme">
-  
-  <nav class="navbar navbar-expand-lg navbar-dark bg-dark shadow-sm">
-    <div class="container">
-      <a class="navbar-brand fw-bold" href="index.html">Hamake D. Arayanai</a>
-      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-      </button>
-      <div class="collapse navbar-collapse" id="navbarNav">
-        <ul class="navbar-nav ms-auto">
-          <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
-          <li class="nav-item"><a class="nav-link" href="pages.html">Pages</a></li>
-          <li class="nav-item"><a class="nav-link active" href="whatsappchatform.html">WhatsApp Chat</a></li>
-        </ul>
+  <header>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark shadow-sm" role="navigation">
+      <div class="container">
+        <a class="navbar-brand fw-bold" href="index.html">Hamake D. Arayanai</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav ms-auto">
+            <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+            <li class="nav-item"><a class="nav-link" href="pages.html">Pages</a></li>
+            <li class="nav-item"><a class="nav-link active" href="whatsappchatform.html">WhatsApp Chat</a></li>
+          </ul>
+        </div>
       </div>
-    </div>
-  </nav>
+    </nav>
+  </header>
   
-  <div class="hero-section">
-    <h1>WhatsApp Chat Form</h1>
-    <p class="lead">Instantly connect with WhatsApp using a custom message.</p>
-  </div>
-  
-  <div class="container text-center mt-5">
-    <div class="form-container">
-      <form id="whatsappForm">
-        <div class="mb-3">
-          <label for="phone" class="form-label">Enter Phone Number:</label>
-          <input type="text" id="phone" name="phone" class="form-control" placeholder="e.g., +6281234567890" required>
-          <div class="invalid-feedback">Please enter a valid phone number.</div>
-        </div>
-        <div class="mb-3">
-          <label for="message" class="form-label">Optional Message:</label>
-          <textarea id="message" name="message" class="form-control" placeholder="Type your message here..."></textarea>
-        </div>
-        <button type="submit" class="btn btn-outline-secondary w-100">Open WhatsApp Chat</button>
-      </form>
-    </div>
-  </div>
+  <main>
+    <section class="hero-section">
+      <h1>WhatsApp Chat Form</h1>
+      <p class="lead">Instantly connect with WhatsApp using a custom message.</p>
+    </section>
+    
+    <section class="container text-center mt-5">
+      <div class="form-container">
+        <form id="whatsappForm" novalidate>
+          <div class="mb-3">
+            <label for="phone" class="form-label">Enter Phone Number:</label>
+            <input type="text" id="phone" name="phone" class="form-control" placeholder="e.g., +6281234567890" required>
+            <div class="invalid-feedback">Please enter a valid phone number.</div>
+          </div>
+          <div class="mb-3">
+            <label for="message" class="form-label">Optional Message:</label>
+            <textarea id="message" name="message" class="form-control" placeholder="Type your message here..."></textarea>
+          </div>
+          <button type="submit" class="btn btn-outline-secondary w-100">Open WhatsApp Chat</button>
+        </form>
+      </div>
+    </section>
+  </main>
   
   <footer class="bg-dark text-white text-center py-3 mt-5 shadow-sm">
     <p>&copy; <span id="currentYear"></span> Hamake D. Arayanai | All Rights Reserved</p>
   </footer>
   
+  <!-- JavaScript -->
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" defer></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/libphonenumber-js/1.9.51/libphonenumber-js.min.js"></script>
+  <!-- Library for phone number validation -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/libphonenumber-js/1.9.51/libphonenumber-js.min.js"></script>
   <script src="js/scripts.js" defer></script>
 </body>
 </html>
