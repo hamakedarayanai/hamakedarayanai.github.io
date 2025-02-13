@@ -1,9 +1,89 @@
-document.addEventListener("DOMContentLoaded",function(){document.getElementById("currentYear").textContent=new Date().getFullYear()}),window.addEventListener("scroll",function(){let e=document.querySelector(".navbar");window.scrollY>50?e.classList.add("shadow-lg"):e.classList.remove("shadow-lg")}),document.querySelectorAll('a[href^="#"]').forEach(e=>{e.addEventListener("click",function(e){e.preventDefault();let t=document.querySelector(this.getAttribute("href"));t&&t.scrollIntoView({behavior:"smooth",block:"start"})})}),document.addEventListener("DOMContentLoaded",function(){let e=document.getElementById("whatsappForm");e&&e.addEventListener("submit",function(e){e.preventDefault();let t=document.getElementById("phone").value.trim(),n=document.getElementById("message").value.trim();if(/^\+?[1-9]\d{7,14}$/.test(t))document.getElementById("phone").classList.remove("is-invalid");else{document.getElementById("phone").classList.add("is-invalid");return}let a=`https://api.whatsapp.com/send?phone=${encodeURIComponent(t)}`;n&&(a+=`&text=${encodeURIComponent(n)}`),window.open(a,"_blank")})}),document.addEventListener("DOMContentLoaded",function(){document.querySelectorAll("img[loading='lazy']").forEach(e=>{e.addEventListener("load",function(){e.classList.add("fade-in")})})}),document.head.insertAdjacentHTML("beforeend",`
-  <style>
-    .fade-in { animation: fadeIn 1s ease-in-out; }
-    @keyframes fadeIn {
-      from { opacity: 0; transform: translateY(-10px); }
-      to { opacity: 1; transform: translateY(0); }
+// Update the footer year dynamically
+document.addEventListener("DOMContentLoaded", function () {
+  const currentYearElem = document.getElementById("currentYear");
+  if (currentYearElem) {
+    currentYearElem.textContent = new Date().getFullYear();
+  }
+});
+
+// Navbar shrink effect on scroll
+window.addEventListener("scroll", function () {
+  const navbar = document.querySelector(".navbar");
+  if (navbar) {
+    if (window.scrollY > 50) {
+      navbar.classList.add("shadow-lg");
+    } else {
+      navbar.classList.remove("shadow-lg");
     }
-  </style>
-`);
+  }
+});
+
+// Smooth scrolling for anchor links
+document.addEventListener("DOMContentLoaded", function () {
+  const anchors = document.querySelectorAll('a[href^="#"]');
+  anchors.forEach(anchor => {
+    anchor.addEventListener("click", function (e) {
+      e.preventDefault();
+      const target = document.querySelector(this.getAttribute("href"));
+      if (target) {
+        target.scrollIntoView({ behavior: "smooth", block: "start" });
+      }
+    });
+  });
+});
+
+// WhatsApp Chat Form Handler
+document.addEventListener("DOMContentLoaded", function () {
+  const whatsappForm = document.getElementById("whatsappForm");
+  if (whatsappForm) {
+    whatsappForm.addEventListener("submit", function (e) {
+      e.preventDefault();
+      const phoneInput = document.getElementById("phone");
+      const messageInput = document.getElementById("message");
+      const phone = phoneInput ? phoneInput.value.trim() : "";
+      const message = messageInput ? messageInput.value.trim() : "";
+      
+      // Validate phone number format (basic check)
+      const phonePattern = /^\+?[1-9]\d{7,14}$/;
+      if (!phonePattern.test(phone)) {
+        phoneInput.classList.add("is-invalid");
+        return;
+      } else {
+        phoneInput.classList.remove("is-invalid");
+      }
+  
+      // Construct WhatsApp URL
+      let whatsappUrl = `https://api.whatsapp.com/send?phone=${encodeURIComponent(phone)}`;
+      if (message) {
+        whatsappUrl += `&text=${encodeURIComponent(message)}`;
+      }
+  
+      // Open WhatsApp chat in a new tab
+      window.open(whatsappUrl, "_blank");
+    });
+  }
+});
+
+// Lazy loading images with fade-in effect
+document.addEventListener("DOMContentLoaded", function () {
+  const lazyImages = document.querySelectorAll("img[loading='lazy']");
+  lazyImages.forEach(img => {
+    img.addEventListener("load", function () {
+      img.classList.add("fade-in");
+    });
+  });
+});
+
+// Inject fade-in animation styles into the document head
+document.addEventListener("DOMContentLoaded", function () {
+  const fadeInStyle = `
+    <style>
+      .fade-in { animation: fadeIn 1s ease-in-out; }
+      @keyframes fadeIn {
+        from { opacity: 0; transform: translateY(-10px); }
+        to { opacity: 1; transform: translateY(0); }
+      }
+    </style>
+  `;
+  document.head.insertAdjacentHTML("beforeend", fadeInStyle);
+});
