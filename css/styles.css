@@ -28,10 +28,6 @@ body.dark-theme {
   transition: background-color 0.3s ease-in-out;
 }
 
-.navbar.scrolled {
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-}
-
 .navbar-dark .navbar-nav .nav-link {
   color: #b0b0b0;
   transition: color 0.3s;
@@ -39,12 +35,6 @@ body.dark-theme {
 
 .navbar-dark .navbar-nav .nav-link:hover {
   color: #ffffff;
-}
-
-.navbar-dark .navbar-nav .nav-link.active {
-  color: #ffffff;
-  font-weight: bold;
-  border-bottom: 2px solid #ffffff;
 }
 
 /* Header & Navigation */
@@ -84,11 +74,6 @@ header {
   background-color: #222222;
 }
 
-.btn:focus {
-  outline: 2px solid #ffffff;
-  outline-offset: 2px;
-}
-
 /* Forms */
 .form-container {
   max-width: 500px;
@@ -99,19 +84,10 @@ header {
   box-shadow: 0 0 10px rgba(255, 255, 255, 0.1);
 }
 
-body.dark-theme .form-container {
-  background: rgba(30, 30, 30, 0.8);
-}
-
 .form-control {
   background: #1e1e1e;
   color: #ffffff;
   border: 1px solid #444444;
-}
-
-body.dark-theme .form-control {
-  background: #333333;
-  border-color: #555555;
 }
 
 .form-control:focus {
@@ -129,26 +105,6 @@ footer {
   padding: 15px;
   margin-top: 30px;
   font-size: 14px;
-}
-
-/* Scroll-to-Top Button */
-.scroll-to-top {
-  position: fixed;
-  bottom: 20px;
-  right: 20px;
-  background-color: #333333;
-  color: #ffffff;
-  padding: 10px;
-  border-radius: 50%;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-  cursor: pointer;
-  display: none;
-  transition: opacity 0.3s;
-}
-
-.scroll-to-top.show {
-  display: block;
-  opacity: 1;
 }
 
 /* Animations */
@@ -184,12 +140,12 @@ main {
   .hero-section {
     padding: 50px 20px;
   }
-
+  
   .profile-picture {
     width: 100px;
     height: 100px;
   }
-
+  
   .form-container {
     padding: 15px;
   }
