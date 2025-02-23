@@ -16,7 +16,7 @@ window.addEventListener("scroll", function () {
       navbar.classList.remove("shadow-lg");
     }
   }
-}, { passive: true });
+});
 
 // Smooth scrolling for anchor links
 document.addEventListener("DOMContentLoaded", function () {
@@ -43,6 +43,7 @@ document.addEventListener("DOMContentLoaded", function () {
       const phone = phoneInput ? phoneInput.value.trim() : "";
       const message = messageInput ? messageInput.value.trim() : "";
       
+      // Validate phone number format (basic check)
       const phonePattern = /^\+?[1-9]\d{7,14}$/;
       if (!phonePattern.test(phone)) {
         phoneInput.classList.add("is-invalid");
@@ -51,27 +52,14 @@ document.addEventListener("DOMContentLoaded", function () {
         phoneInput.classList.remove("is-invalid");
       }
   
+      // Construct WhatsApp URL
       let whatsappUrl = `https://api.whatsapp.com/send?phone=${encodeURIComponent(phone)}`;
       if (message) {
         whatsappUrl += `&text=${encodeURIComponent(message)}`;
       }
   
+      // Open WhatsApp chat in a new tab
       window.open(whatsappUrl, "_blank");
-    });
-  }
-
-  // Real-time phone validation feedback
-  const phoneInput = document.getElementById("phone");
-  if (phoneInput) {
-    phoneInput.addEventListener("input", function () {
-      const phonePattern = /^\+?[1-9]\d{7,14}$/;
-      if (phonePattern.test(this.value.trim())) {
-        this.classList.remove("is-invalid");
-        this.classList.add("is-valid");
-      } else {
-        this.classList.remove("is-valid");
-        this.classList.add("is-invalid");
-      }
     });
   }
 });
@@ -99,44 +87,3 @@ document.addEventListener("DOMContentLoaded", function () {
   `;
   document.head.insertAdjacentHTML("beforeend", fadeInStyle);
 });
-
-// Scroll-to-top button behavior
-document.addEventListener("DOMContentLoaded", function () {
-  const scrollToTopBtn = document.createElement("div");
-  scrollToTopBtn.classList.add("scroll-to-top");
-  scrollToTopBtn.innerHTML = "↑";
-  document.body.appendChild(scrollToTopBtn);
-
-  window.addEventListener("scroll", function () {
-    if (window.scrollY > 300) {
-      scrollToTopBtn.classList.add("show");
-    } else {
-      scrollToTopBtn.classList.remove("show");
-    }
-  }, { passive: true });
-
-  scrollToTopBtn.addEventListener("click", function () {
-    window.scrollTo({ top: 0, behavior: "smooth" });
-  });
-});
-
-// Highlight active navbar link on scroll
-window.addEventListener("scroll", function () {
-  const sections = document.querySelectorAll("section[id]");
-  const navLinks = document.querySelectorAll(".navbar-nav .nav-link");
-  let current = "";
-
-  sections.forEach((section) => {
-    const sectionTop = section.offsetTop - 60;
-    if (window.scrollY >= sectionTop) {
-      current = section.getAttribute("id");
-    }
-  });
-
-  navLinks.forEach((link) => {
-    link.classList.remove("active");
-    if (link.getAttribute("href").includes(current)) {
-      link.classList.add("active");
-    }
-  });
-}, { passive: true });
