@@ -1,3 +1,5 @@
+// scripts.js
+
 // Update the footer year dynamically
 document.addEventListener("DOMContentLoaded", function () {
   const currentYearElem = document.getElementById("currentYear");
