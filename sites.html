@@ -48,8 +48,8 @@
   
 </head>
 <body class="dark-theme">
-  <header>
-    <nav class="navbar navbar-expand-lg navbar-dark bg-dark shadow-sm">
+  <header role="banner">
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark shadow-sm" aria-label="Main Navigation">
       <div class="container">
         <a class="navbar-brand fw-bold" href="index.html">Hamake D. Arayanai</a>
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
@@ -68,7 +68,7 @@
     </nav>
   </header>
   
-  <main>
+  <main role="main">
     <section class="hero-section text-center py-5">
       <div class="container">
         <h1>Explore Our Sites</h1>
@@ -81,11 +81,14 @@
         <div class="col-md-4 col-sm-6 mb-3">
           <a href="http://harapanbaruservice.biz.id/" class="btn btn-outline-secondary w-100" target="_blank">Harapan Baru Service</a>
         </div>
+        <div class="col-md-4 col-sm-6 mb-3">
+          <a href="https://example.com" class="btn btn-outline-secondary w-100" target="_blank">Example Site</a>
+        </div>
       </div>
     </section>
   </main>
   
-  <footer class="bg-dark text-white text-center py-3 mt-5 shadow-sm">
+  <footer class="bg-dark text-white text-center py-3 mt-5 shadow-sm" role="contentinfo">
     <p>&copy; <span id="currentYear"></span> Hamake D. Arayanai | All Rights Reserved</p>
   </footer>
   

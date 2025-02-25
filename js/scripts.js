@@ -1,15 +1,15 @@
 // scripts.js
 
 // Update the footer year dynamically
-document.addEventListener("DOMContentLoaded", function () {
+function updateFooterYear() {
   const currentYearElem = document.getElementById("currentYear");
   if (currentYearElem) {
     currentYearElem.textContent = new Date().getFullYear();
   }
-});
+}
 
 // Navbar shrink effect on scroll
-window.addEventListener("scroll", function () {
+function navbarShrinkEffect() {
   const navbar = document.querySelector(".navbar");
   if (navbar) {
     if (window.scrollY > 50) {
@@ -18,10 +18,10 @@ window.addEventListener("scroll", function () {
       navbar.classList.remove("shadow-lg");
     }
   }
-});
+}
 
 // Smooth scrolling for anchor links
-document.addEventListener("DOMContentLoaded", function () {
+function smoothScrolling() {
   const anchors = document.querySelectorAll('a[href^="#"]');
   anchors.forEach(anchor => {
     anchor.addEventListener("click", function (e) {
@@ -32,18 +32,18 @@ document.addEventListener("DOMContentLoaded", function () {
       }
     });
   });
-});
+}
 
 // WhatsApp Chat Form Handler
-document.addEventListener("DOMContentLoaded", function () {
+function whatsappChatFormHandler() {
   const whatsappForm = document.getElementById("whatsappForm");
   if (whatsappForm) {
     whatsappForm.addEventListener("submit", function (e) {
       e.preventDefault();
       const phoneInput = document.getElementById("phone");
       const messageInput = document.getElementById("message");
-      const phone = phoneInput ? phoneInput.value.trim() : "";
-      const message = messageInput ? messageInput.value.trim() : "";
+      const phone = phoneInput? phoneInput.value.trim() : "";
+      const message = messageInput? messageInput.value.trim() : "";
       
       // Validate phone number format (basic check)
       const phonePattern = /^\+?[1-9]\d{7,14}$/;
@@ -64,23 +64,23 @@ document.addEventListener("DOMContentLoaded", function () {
       window.open(whatsappUrl, "_blank");
     });
   }
-});
+}
 
 // Lazy loading images with fade-in effect
-document.addEventListener("DOMContentLoaded", function () {
+function lazyLoadingImages() {
   const lazyImages = document.querySelectorAll("img[loading='lazy']");
   lazyImages.forEach(img => {
     img.addEventListener("load", function () {
       img.classList.add("fade-in");
     });
   });
-});
+}
 
 // Inject fade-in animation styles into the document head
-document.addEventListener("DOMContentLoaded", function () {
+function injectFadeInStyles() {
   const fadeInStyle = `
     <style>
-      .fade-in { animation: fadeIn 1s ease-in-out; }
+     .fade-in { animation: fadeIn 1s ease-in-out; }
       @keyframes fadeIn {
         from { opacity: 0; transform: translateY(-10px); }
         to { opacity: 1; transform: translateY(0); }
@@ -88,4 +88,14 @@ document.addEventListener("DOMContentLoaded", function () {
     </style>
   `;
   document.head.insertAdjacentHTML("beforeend", fadeInStyle);
+}
+
+document.addEventListener("DOMContentLoaded", function () {
+  updateFooterYear();
+  smoothScrolling();
+  whatsappChatFormHandler();
+  lazyLoadingImages();
+  injectFadeInStyles();
 });
+
+window.addEventListener("scroll", navbarShrinkEffect);
