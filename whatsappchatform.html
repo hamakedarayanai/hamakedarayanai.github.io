@@ -76,7 +76,7 @@
     </section>
     
     <section class="container text-center mt-5">
-      <div class="form-container">
+      <article class="form-container">
         <form id="whatsappForm" novalidate>
           <div class="mb-3">
             <label for="phone" class="form-label">Enter Phone Number:</label>
@@ -90,12 +90,12 @@
           <button type="submit" class="btn btn-outline-secondary w-100">Open WhatsApp Chat</button>
         </form>
         <p id="form-error" style="display: none;">Error submitting form. Please try again later.</p>
-      </div>
+      </article>
     </section>
   </main>
   
   <footer class="bg-dark text-white text-center py-3 mt-5 shadow-sm" role="contentinfo">
-    <p>&copy; <span id="currentYear"></span> Hamake D. Arayanai | All Rights Reserved</p>
+    <p>&copy; <span id="currentYear"></span> Hamake D. Arayanai | All Rights Reserved | <a href="mailto:admin@hamakedarayanai.my.id">Contact</a></p>
   </footer>
   
   <!-- JavaScript -->
@@ -103,23 +103,5 @@
   <!-- Library for phone number validation -->
   <script src="https://cdnjs.cloudflare.com/ajax/libs/libphonenumber-js/1.9.51/libphonenumber-js.min.js"></script>
   <script src="js/scripts.js" defer></script>
-  <script>
-    const form = document.getElementById('whatsappForm');
-    form.addEventListener('submit', (e) => {
-      e.preventDefault();
-      const phone = document.getElementById('phone').value;
-      const message = document.getElementById('message').value;
-      const phoneNumber = parsePhoneNumber(phone);
-      if (phoneNumber.isValid()) {
-        const url = `https://wa.me/${phoneNumber.formatInternational()}`;
-        if (message) {
-          url += `?text=${encodeURIComponent(message)}`;
-        }
-        window.open(url, '_blank');
-      } else {
-        document.getElementById('form-error').style.display = 'block';
-      }
-    });
-  </script>
 </body>
 </html>

@@ -5,6 +5,9 @@
   --secondary-color: #ffffff;
   --background-color: #121212;
   --text-color: #b0b0b0;
+  --font-family: 'Poppins', sans-serif;
+  --font-size: 16px;
+  --line-height: 1.6;
 }
 
 /* Reset and Base Styles */
@@ -16,20 +19,27 @@
 
 html, body {
   height: 100%;
+  font-family: var(--font-family);
+  font-size: var(--font-size);
+  line-height: var(--line-height);
 }
 
 /* General Styles */
 body {
-  font-family: 'Poppins', sans-serif;
   transition: background 0.3s, color 0.3s;
   background-color: var(--background-color);
   color: var(--text-color);
-  line-height: 1.6;
 }
 
 body.dark-theme {
   background-color: var(--background-color);
   color: var(--text-color);
+}
+
+/* Typography */
+h1, h2, h3, h4, h5, h6 {
+  font-weight: bold;
+  color: var(--primary-color);
 }
 
 /* Navbar */
@@ -59,7 +69,7 @@ header {
   text-align: center;
 }
 
-.profile-picture {
+.hero-section.profile-picture {
   width: 120px;
   height: 120px;
   border-radius: 50%;
@@ -150,12 +160,34 @@ main {
     padding: 50px 20px;
   }
   
- .profile-picture {
+ .hero-section.profile-picture {
     width: 100px;
     height: 100px;
   }
   
  .form-container {
     padding: 15px;
+  }
+}
+
+@media (max-width: 480px) {
+ .hero-section {
+    padding: 30px 10px;
+  }
+  
+ .hero-section.profile-picture {
+    width: 80px;
+    height: 80px;
+  }
+  
+ .form-container {
+    padding: 10px;
+  }
+}
+
+@media (prefers-color-scheme: dark) {
+  body {
+    background-color: var(--background-color);
+    color: var(--text-color);
   }
 }
