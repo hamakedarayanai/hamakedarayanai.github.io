@@ -1,29 +1,41 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" dir="ltr">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#121212">
   <title>Pages | Hamake D. Arayanai</title>
-  <meta name="description" content="Explore the various pages and services offered by Hamake D. Arayanai.">
-  <meta name="keywords" content="Hamake D. Arayanai, services, radio, chat form, website sections">
+  <meta name="description" content="Explore various pages and services offered by Hamake D. Arayanai, including radio and WhatsApp chat features.">
+  <meta name="keywords" content="Hamake D. Arayanai, content creator pages, radio service, WhatsApp chat, website sections">
   <meta name="author" content="Hamake D. Arayanai">
+  <meta name="robots" content="index, follow">
   
   <!-- Open Graph / Facebook -->
   <meta property="og:title" content="Pages | Hamake D. Arayanai">
-  <meta property="og:description" content="Discover different pages and services available on the website.">
+  <meta property="og:description" content="Discover various pages and services including radio and WhatsApp chat features on Hamake D. Arayanai's website.">
   <meta property="og:url" content="https://hamakedarayanai.my.id/pages.html">
   <meta property="og:type" content="website">
+  <meta property="og:image" content="https://hamakedarayanai.my.id/img/favicon.png">
+  <meta property="og:image:alt" content="Hamake D. Arayanai website logo">
+  <meta property="og:locale" content="en_US">
   
   <!-- Twitter -->
   <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:site" content="@hamakedarayanai">
+  <meta name="twitter:creator" content="@hamakedarayanai">
   
   <!-- Favicon -->
-  <link rel="icon" type="image/png" href="img/favicon.png">
+  <link rel="icon" type="image/png" href="img/favicon.png" sizes="32x32">
+  <link rel="apple-touch-icon" href="img/favicon.png">
+  
+  <!-- Preload critical resources -->
+  <link rel="preload" href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;700&display=swap" as="style">
+  <link rel="preload" href="css/styles.css" as="style">
   
   <!-- CSS -->
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css">
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;700&display=swap">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+  <link rel="preconnect" href="https://fonts.googleapis.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;700&display=swap" media="print" onload="this.media='all'">
   <link rel="stylesheet" href="css/styles.css">
   
   <!-- Structured Data -->
@@ -31,63 +43,91 @@
   {
     "@context": "https://schema.org",
     "@type": "WebPage",
-    "name": "Pages",
+    "name": "Pages - Hamake D. Arayanai",
     "url": "https://hamakedarayanai.my.id/pages.html",
-    "description": "Explore the various pages and services offered by Hamake D. Arayanai."
+    "description": "Explore various pages and services offered by Hamake D. Arayanai, including radio and WhatsApp chat features.",
+    "isPartOf": {
+      "@type": "WebSite",
+      "name": "Hamake D. Arayanai",
+      "url": "https://hamakedarayanai.my.id"
+    },
+    "breadcrumb": {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": "https://hamakedarayanai.my.id"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Pages",
+          "item": "https://hamakedarayanai.my.id/pages.html"
+        }
+      ]
+    }
   }
   </script>
 
-  <!-- Microsoft Clarity -->
-  <script type="text/javascript">
-    (function(c,l,a,r,i,t,y){c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y)})(window, document, "clarity", "script", "ln7v9zp5ah");
+  <!-- Microsoft Clarity (async) -->
+  <script type="text/javascript" defer>
+    (function(c,l,a,r,i,t,y){
+      c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
+      t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;
+      y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
+    })(window, document, "clarity", "script", "ln7v9zp5ah");
   </script>
-  
 </head>
 <body class="dark-theme">
+  <a href="#main" class="visually-hidden-focusable">Skip to main content</a>
+  
   <header role="banner">
-    <nav class="navbar navbar-expand-lg navbar-dark bg-dark shadow-sm" role="navigation">
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark shadow-sm" role="navigation" aria-label="Main navigation">
       <div class="container">
-        <a class="navbar-brand fw-bold" href="index.html">Hamake D. Arayanai</a>
+        <a class="navbar-brand fw-bold" href="/" aria-label="Hamake D. Arayanai Home">Hamake D. Arayanai</a>
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
                 aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
         </button>
         <div class="collapse navbar-collapse" id="navbarNav">
           <ul class="navbar-nav ms-auto">
-            <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
-            <li class="nav-item"><a class="nav-link active" href="pages.html">Pages</a></li>
-            <li class="nav-item"><a class="nav-link" href="sites.html">Sites</a></li>
-            <li class="nav-item"><a class="nav-link" href="bookmarks.html">Bookmarks</a></li>
+            <li class="nav-item"><a class="nav-link" href="/">Home</a></li>
+            <li class="nav-item"><a class="nav-link active" href="/pages.html" aria-current="page">Pages</a></li>
+            <li class="nav-item"><a class="nav-link" href="/sites.html">Sites</a></li>
+            <li class="nav-item"><a class="nav-link" href="/bookmarks.html">Bookmarks</a></li>
           </ul>
         </div>
       </div>
     </nav>
   </header>
   
-  <main role="main">
-    <section class="hero-section">
-      <h1>Explore Our Pages</h1>
-      <p class="lead">Discover the different sections of our website.</p>
+  <main id="main" role="main">
+    <section class="hero-section" aria-labelledby="pages-title">
+      <h1 id="pages-title">Explore Our Pages</h1>
+      <p class="lead">Discover the different sections and services of our website.</p>
     </section>
     
-    <section class="container text-center mt-5">
+    <section class="container text-center mt-5" aria-label="Page links">
+      <h2 class="visually-hidden">Available Pages</h2>
       <ul class="list-unstyled">
         <li class="mb-3">
-          <a href="radio.html" class="btn btn-outline-secondary w-100">Radio Page</a>
+          <a href="/radio.html" class="btn btn-outline-secondary w-100" rel="next">Radio Page</a>
         </li>
         <li class="mb-3">
-          <a href="whatsappchatform.html" class="btn btn-outline-secondary w-100">WhatsApp Chat Form Page</a>
+          <a href="/whatsappchatform.html" class="btn btn-outline-secondary w-100" rel="next">WhatsApp Chat Form Page</a>
         </li>
       </ul>
     </section>
   </main>
   
   <footer class="bg-dark text-white text-center py-3 mt-5 shadow-sm" role="contentinfo">
-    <p>&copy; <span id="currentYear"></span> Hamake D. Arayanai | All Rights Reserved | <a href="mailto:admin@hamakedarayanai.my.id">Contact</a></p>
+    <p>© <time id="currentYear" datetime="2025">2025</time> Hamake D. Arayanai | All Rights Reserved | <a href="mailto:admin@hamakedarayanai.my.id" rel="nofollow">Contact</a></p>
   </footer>
   
   <!-- JavaScript -->
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" defer></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous" defer></script>
   <script src="js/scripts.js" defer></script>
 </body>
 </html>

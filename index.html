@@ -1,30 +1,41 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" dir="ltr">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#121212">
   <title>Hamake D. Arayanai | Official Website</title>
-  <meta name="description" content="Explore the official website of Hamake D. Arayanai. Connect on social media and discover more.">
-  <meta name="keywords" content="Hamake D. Arayanai, official website, social media, content creator">
+  <meta name="description" content="Official website of Hamake D. Arayanai. Connect via social media and explore content creation journey.">
+  <meta name="keywords" content="Hamake D. Arayanai, content creator, social media influencer, official website">
   <meta name="author" content="Hamake D. Arayanai">
+  <meta name="robots" content="index, follow">
   
   <!-- Open Graph / Facebook -->
-  <meta property="og:title" content="Hamake D. Arayanai">
-  <meta property="og:description" content="Connect through social media and explore pages.">
-  <meta property="og:image" content="img/profile-picture.png">
+  <meta property="og:title" content="Hamake D. Arayanai | Official Website">
+  <meta property="og:description" content="Connect with Hamake D. Arayanai through social media and explore exclusive content.">
+  <meta property="og:image" content="https://hamakedarayanai.my.id/img/profile-picture.png">
+  <meta property="og:image:alt" content="Profile picture of Hamake D. Arayanai">
   <meta property="og:url" content="https://hamakedarayanai.my.id">
   <meta property="og:type" content="website">
+  <meta property="og:locale" content="en_US">
   
   <!-- Twitter -->
   <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:site" content="@hamakedarayanai">
+  <meta name="twitter:creator" content="@hamakedarayanai">
   
   <!-- Favicon -->
-  <link rel="icon" type="image/png" href="img/favicon.png">
+  <link rel="icon" type="image/png" href="img/favicon.png" sizes="32x32">
+  <link rel="apple-touch-icon" href="img/favicon.png">
+  
+  <!-- Preload critical resources -->
+  <link rel="preload" href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;700&display=swap" as="style">
+  <link rel="preload" href="img/profile-picture.png" as="image">
   
   <!-- CSS -->
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css">
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;700&display=swap">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+  <link rel="preconnect" href="https://fonts.googleapis.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;700&display=swap" media="print" onload="this.media='all'">
   <link rel="stylesheet" href="css/styles.css">
   
   <!-- Structured Data -->
@@ -34,6 +45,9 @@
     "@type": "Person",
     "name": "Hamake D. Arayanai",
     "url": "https://hamakedarayanai.my.id",
+    "image": "https://hamakedarayanai.my.id/img/profile-picture.png",
+    "jobTitle": "Content Creator",
+    "email": "mailto:admin@hamakedarayanai.my.id",
     "sameAs": [
       "https://www.facebook.com/hamakedarayanai/",
       "https://x.com/hamakedarayanai",
@@ -45,68 +59,75 @@
   }
   </script>
   
-  <!-- Microsoft Clarity -->
-  <script type="text/javascript">
-    (function(c,l,a,r,i,t,y){c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y)})(window, document, "clarity", "script", "ln7v9zp5ah");
+  <!-- Microsoft Clarity (async) -->
+  <script type="text/javascript" defer>
+    (function(c,l,a,r,i,t,y){
+      c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
+      t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;
+      y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
+    })(window, document, "clarity", "script", "ln7v9zp5ah");
   </script>
 </head>
 <body class="dark-theme">
+  <a href="#main" class="visually-hidden-focusable">Skip to main content</a>
+  
   <header role="banner">
-    <nav class="navbar navbar-expand-lg navbar-dark bg-dark shadow-sm" role="navigation">
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark shadow-sm" role="navigation" aria-label="Main navigation">
       <div class="container">
-        <a class="navbar-brand fw-bold" href="index.html">Hamake D. Arayanai</a>
+        <a class="navbar-brand fw-bold" href="/" aria-label="Hamake D. Arayanai Home">Hamake D. Arayanai</a>
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
         </button>
         <div class="collapse navbar-collapse" id="navbarNav">
           <ul class="navbar-nav ms-auto">
-            <li class="nav-item"><a class="nav-link active" href="index.html">Home</a></li>
-            <li class="nav-item"><a class="nav-link" href="pages.html">Pages</a></li>
-            <li class="nav-item"><a class="nav-link" href="sites.html">Sites</a></li>
-            <li class="nav-item"><a class="nav-link" href="bookmarks.html">Bookmarks</a></li>
+            <li class="nav-item"><a class="nav-link active" href="/" aria-current="page">Home</a></li>
+            <li class="nav-item"><a class="nav-link" href="/pages.html">Pages</a></li>
+            <li class="nav-item"><a class="nav-link" href="/sites.html">Sites</a></li>
+            <li class="nav-item"><a class="nav-link" href="/bookmarks.html">Bookmarks</a></li>
           </ul>
         </div>
       </div>
     </nav>
   </header>
   
-  <main role="main">
-    <section class="hero-section">
-      <img src="img/profile-picture.png" alt="Profile picture of Hamake D. Arayanai" class="profile-picture" loading="lazy">
-      <h1 class="mt-3">Hamake D. Arayanai</h1>
+  <main id="main" role="main">
+    <section class="hero-section" aria-labelledby="hero-title">
+      <img src="img/profile-picture.png" alt="Profile picture of Hamake D. Arayanai" class="profile-picture" loading="lazy" width="120" height="120">
+      <h1 class="mt-3" id="hero-title">Hamake D. Arayanai</h1>
       <p class="lead">Love me or hate me, but spare me your indifference.</p>
     </section>
     
-    <section class="social-links container text-center mt-5">
+    <section class="social-links container text-center mt-5" aria-label="Social media links">
+      <h2 class="visually-hidden">Social Media Connections</h2>
       <ul class="list-unstyled">
         <li class="mb-3">
-          <a href="https://www.facebook.com/hamakedarayanai/" class="btn btn-outline-secondary w-100" target="_blank">Facebook</a>
+          <a href="https://www.facebook.com/hamakedarayanai/" class="btn btn-outline-secondary w-100" target="_blank" rel="noopener noreferrer">Facebook</a>
         </li>
         <li class="mb-3">
-          <a href="https://x.com/hamakedarayanai" class="btn btn-outline-secondary w-100" target="_blank">X</a>
+          <a href="https://x.com/hamakedarayanai" class="btn btn-outline-secondary w-100" target="_blank" rel="noopener noreferrer">X</a>
         </li>
         <li class="mb-3">
-          <a href="https://www.instagram.com/hamakedarayanai/" class="btn btn-outline-secondary w-100" target="_blank">Instagram</a>
+          <a href="https://www.instagram.com/hamakedarayanai/" class="btn btn-outline-secondary w-100" target="_blank" rel="noopener noreferrer">Instagram</a>
         </li>
         <li class="mb-3">
-          <a href="https://www.youtube.com/@hamakedarayanai" class="btn btn-outline-secondary w-100" target="_blank">YouTube</a>
+          <a href="https://www.youtube.com/@hamakedarayanai" class="btn btn-outline-secondary w-100" target="_blank" rel="noopener noreferrer">YouTube</a>
         </li>
         <li class="mb-3">
-          <a href="https://www.linkedin.com/in/hamakedarayanai" class="btn btn-outline-secondary w-100" target="_blank">LinkedIn</a>
+          <a href="https://www.linkedin.com/in/hamakedarayanai" class="btn btn-outline-secondary w-100" target="_blank" rel="noopener noreferrer">LinkedIn</a>
         </li>
         <li class="mb-3">
-          <a href="https://www.tiktok.com/@hamakedarayanai" class="btn btn-outline-secondary w-100" target="_blank">TikTok</a>
+          <a href="https://www.tiktok.com/@hamakedarayanai" class="btn btn-outline-secondary w-100" target="_blank" rel="noopener noreferrer">TikTok</a>
         </li>
       </ul>
     </section>
   </main>
   
   <footer class="bg-dark text-white text-center py-3 mt-5 shadow-sm" role="contentinfo">
-    <p>&copy; <span id="currentYear"></span> Hamake D. Arayanai | All Rights Reserved | <a href="mailto:admin@hamakedarayanai.my.id">Contact</a></p>
+    <p>© <time id="currentYear" datetime="2025">2025</time> Hamake D. Arayanai | All Rights Reserved | <a href="mailto:admin@hamakedarayanai.my.id" rel="nofollow">Contact</a></p>
   </footer>
   
   <!-- JavaScript -->
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" defer></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous" defer></script>
   <script src="js/scripts.js" defer></script>
 </body>
 </html>
