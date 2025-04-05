@@ -1,43 +1,54 @@
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
 <head>
+  <!-- Primary Meta Tags -->
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="theme-color" content="#121212">
   <title>Radio | Hamake D. Arayanai</title>
   <meta name="description" content="Listen to Streaming Radio Al-Fatah Trangkil Temboro on Hamake D. Arayanai's official website.">
-  <meta name="keywords" content="Hamake D. Arayanai, radio streaming, Al-Fatah Trangkil Temboro, online radio, live audio">
   <meta name="author" content="Hamake D. Arayanai">
+
+  <!-- SEO Meta Tags -->
+  <meta name="keywords" content="Hamake D. Arayanai, radio streaming, Al-Fatah Trangkil Temboro, online radio, live audio">
   <meta name="robots" content="index, follow">
-  
+  <link rel="canonical" href="https://hamakedarayanai.my.id/radio.html">
+
   <!-- Open Graph / Facebook -->
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://hamakedarayanai.my.id/radio.html">
   <meta property="og:title" content="Radio | Hamake D. Arayanai">
   <meta property="og:description" content="Stream Radio Al-Fatah Trangkil Temboro live on Hamake D. Arayanai's website.">
-  <meta property="og:url" content="https://hamakedarayanai.my.id/radio.html">
-  <meta property="og:type" content="website">
-  <meta property="og:image" content="https://hamakedarayanai.my.id/img/favicon.png">
-  <meta property="og:image:alt" content="Hamake D. Arayanai website logo">
-  <meta property="og:locale" content="en_US">
-  
+  <meta property="og:image" content="https://hamakedarayanai.my.id/img/radio-social.jpg">
+  <meta property="og:image:alt" content="Radio Al-Fatah Trangkil Temboro streaming">
+
   <!-- Twitter -->
-  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:card" content="player">
   <meta name="twitter:site" content="@hamakedarayanai">
   <meta name="twitter:creator" content="@hamakedarayanai">
-  
-  <!-- Favicon -->
-  <link rel="icon" type="image/png" href="img/favicon.png" sizes="32x32">
-  <link rel="apple-touch-icon" href="img/favicon.png">
-  
-  <!-- Preload critical resources -->
-  <link rel="preload" href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;700&display=swap" as="style">
+  <meta name="twitter:title" content="Radio | Hamake D. Arayanai">
+  <meta name="twitter:description" content="Stream Radio Al-Fatah Trangkil Temboro live on Hamake D. Arayanai's website.">
+  <meta name="twitter:image" content="https://hamakedarayanai.my.id/img/radio-social.jpg">
+  <meta name="twitter:player" content="https://hamakedarayanai.my.id/radio-embed.html">
+  <meta name="twitter:player:width" content="300">
+  <meta name="twitter:player:height" content="200">
+
+  <!-- Favicons -->
+  <link rel="icon" href="img/favicon.ico" sizes="any">
+  <link rel="icon" href="img/favicon.svg" type="image/svg+xml">
+  <link rel="apple-touch-icon" href="img/apple-touch-icon.png">
+
+  <!-- Preload Critical Resources -->
+  <link rel="preload" href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;700&display=swap" as="style" crossorigin>
   <link rel="preload" href="css/styles.css" as="style">
-  
+  <link rel="preload" href="js/radio.js" as="script">
+
   <!-- CSS -->
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
-  <link rel="preconnect" href="https://fonts.googleapis.com" crossorigin>
   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;700&display=swap" media="print" onload="this.media='all'">
   <link rel="stylesheet" href="css/styles.css">
-  
+  <link rel="stylesheet" href="css/radio.css">
+
   <!-- Structured Data -->
   <script type="application/ld+json">
   {
@@ -76,87 +87,202 @@
     }
   }
   </script>
-
-  <!-- Microsoft Clarity (async) -->
-  <script type="text/javascript" defer>
-    (function(c,l,a,r,i,t,y){
-      c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
-      t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;
-      y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
-    })(window, document, "clarity", "script", "ln7v9zp5ah");
-  </script>
 </head>
 <body class="dark-theme">
-  <a href="#main" class="visually-hidden-focusable">Skip to main content</a>
+  <!-- Skip to Content Link -->
+  <a id="skip-link" href="#main-content" class="visually-hidden-focusable">Skip to main content</a>
   
-  <header role="banner">
-    <nav class="navbar navbar-expand-lg navbar-dark bg-dark shadow-sm" role="navigation" aria-label="Main navigation">
+  <!-- Header -->
+  <header class="site-header" role="banner">
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark shadow-sm" aria-label="Main navigation">
       <div class="container">
-        <a class="navbar-brand fw-bold" href="/" aria-label="Hamake D. Arayanai Home">Hamake D. Arayanai</a>
-        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" 
-                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <a class="navbar-brand fw-bold" href="/" aria-label="Hamake D. Arayanai Home">
+          <span class="brand-text">Hamake D. Arayanai</span>
+        </a>
+        
+        <button class="navbar-toggler" type="button" 
+                data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                aria-controls="navbarNav" aria-expanded="false" 
+                aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
+          <span class="visually-hidden">Menu</span>
         </button>
+        
         <div class="collapse navbar-collapse" id="navbarNav">
           <ul class="navbar-nav ms-auto">
-            <li class="nav-item"><a class="nav-link" href="/">Home</a></li>
-            <li class="nav-item"><a class="nav-link" href="/pages.html">Pages</a></li>
-            <li class="nav-item"><a class="nav-link" href="/sites.html">Sites</a></li>
-            <li class="nav-item"><a class="nav-link" href="/bookmarks.html">Bookmarks</a></li>
-            <li class="nav-item"><a class="nav-link active" href="/radio.html" aria-current="page">Radio</a></li>
+            <li class="nav-item">
+              <a class="nav-link" href="/">Home</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="/pages.html">Pages</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="/sites.html">Sites</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="/bookmarks.html">Bookmarks</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link active" href="/radio.html" aria-current="page">Radio</a>
+            </li>
           </ul>
         </div>
       </div>
     </nav>
   </header>
   
-  <main id="main" role="main">
-    <section class="hero-section" aria-labelledby="radio-title">
-      <h1 id="radio-title">Streaming Radio</h1>
-      <p class="lead">Listen to Radio Al-Fatah Trangkil Temboro live</p>
+  <!-- Main Content -->
+  <main id="main-content" role="main">
+    <!-- Hero Section -->
+    <section class="radio-hero" aria-labelledby="radio-title">
+      <div class="container text-center py-5">
+        <h1 id="radio-title" class="display-4">Streaming Radio</h1>
+        <p class="lead">Listen to Radio Al-Fatah Trangkil Temboro live</p>
+      </div>
     </section>
     
-    <section class="container text-center mt-5" aria-label="Radio player">
-      <h2 class="visually-hidden">Radio Player</h2>
-      <figure class="audio-container">
-        <audio controls class="w-100" id="radio-player" aria-label="Streaming Radio Al-Fatah Trangkil Temboro" preload="none">
-          <source src="https://i.klikhost.com/8228/;stream.mp3" type="audio/mpeg">
-          Your browser does not support the audio element. Please use a modern browser to listen.
-        </audio>
-        <figcaption class="mt-2">
-          <small class="text-muted">Radio Al-Fatah Trangkil Temboro</small>
-          <p id="audio-error" class="form-error" style="display: none;">Unable to stream audio. Please check your connection or try again later.</p>
-        </figcaption>
-      </figure>
+    <!-- Radio Player Section -->
+    <section class="radio-player-section container py-4" aria-labelledby="player-title">
+      <div class="row justify-content-center">
+        <div class="col-lg-8">
+          <div class="card radio-player-card">
+            <div class="card-body">
+              <h2 id="player-title" class="visually-hidden">Radio Player</h2>
+              
+              <div class="radio-info text-center mb-4">
+                <img src="img/radio-logo.webp" alt="Radio Al-Fatah Trangkil Temboro Logo" class="radio-logo mb-3" width="120" height="120" loading="lazy">
+                <h3 class="radio-station-name">Al-Fatah Trangkil Temboro</h3>
+                <p class="radio-description text-muted">Live streaming 24/7</p>
+              </div>
+              
+              <div class="audio-player-container">
+                <audio id="radio-player" controls class="w-100" preload="none" aria-label="Radio Al-Fatah Trangkil Temboro player">
+                  <source src="https://i.klikhost.com/8228/;stream.mp3" type="audio/mpeg">
+                  Your browser does not support the audio element.
+                </audio>
+                
+                <div class="player-controls mt-3 d-flex flex-wrap justify-content-center gap-2">
+                  <button id="play-btn" class="btn btn-primary" aria-label="Play">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" viewBox="0 0 16 16">
+                      <path d="m11.596 8.697-6.363 3.692c-.54.313-1.233-.066-1.233-.697V4.308c0-.63.692-1.01 1.233-.696l6.363 3.692a.802.802 0 0 1 0 1.393z"/>
+                    </svg>
+                  </button>
+                  <button id="pause-btn" class="btn btn-secondary" aria-label="Pause" disabled>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" viewBox="0 0 16 16">
+                      <path d="M5.5 3.5A1.5 1.5 0 0 1 7 5v6a1.5 1.5 0 0 1-3 0V5a1.5 1.5 0 0 1 1.5-1.5zm5 0A1.5 1.5 0 0 1 12 5v6a1.5 1.5 0 0 1-3 0V5a1.5 1.5 0 0 1 1.5-1.5z"/>
+                    </svg>
+                  </button>
+                  <button id="mute-btn" class="btn btn-outline-secondary" aria-label="Mute">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" viewBox="0 0 16 16">
+                      <path d="M6.717 3.55A.5.5 0 0 1 7 4v8a.5.5 0 0 1-.812.39L3.825 10.5H1.5A.5.5 0 0 1 1 10V6a.5.5 0 0 1 .5-.5h2.325l2.363-1.89a.5.5 0 0 1 .529-.06zM6 5.04 4.312 6.39A.5.5 0 0 1 4 6.5H2v3h2a.5.5 0 0 1 .312.11L6 10.96V5.04zm7.854.606a.5.5 0 0 1 0 .708L12.207 8l1.647 1.646a.5.5 0 0 1-.708.708L11.5 8.707l-1.646 1.647a.5.5 0 0 1-.708-.708L10.793 8 9.146 6.354a.5.5 0 1 1 .708-.708L11.5 7.293l1.646-1.647a.5.5 0 0 1 .708 0z"/>
+                    </svg>
+                  </button>
+                  <div class="volume-control d-flex align-items-center">
+                    <label for="volume-slider" class="form-label visually-hidden">Volume</label>
+                    <input type="range" class="form-range" id="volume-slider" min="0" max="1" step="0.1" value="0.7">
+                  </div>
+                </div>
+                
+                <div id="player-status" class="player-status mt-3 text-center">
+                  <p id="buffering-message" class="text-warning" style="display: none;">
+                    <span class="spinner-border spinner-border-sm" role="status" aria-hidden="true"></span>
+                    Buffering stream...
+                  </p>
+                  <p id="error-message" class="text-danger" style="display: none;"></p>
+                </div>
+              </div>
+              
+              <div class="radio-meta mt-4 text-center">
+                <div class="listening-stats">
+                  <p class="text-muted mb-1">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="me-1" viewBox="0 0 16 16">
+                      <path d="M8 1a2 2 0 0 1 2 2v4H6V3a2 2 0 0 1 2-2zm3 6V3a3 3 0 0 0-6 0v4a2 2 0 0 0-2 2v5a2 2 0 0 0 2 2h6a2 2 0 0 0 2-2V9a2 2 0 0 0-2-2z"/>
+                    </svg>
+                    <span id="listener-count">--</span> listeners
+                  </p>
+                </div>
+                <div class="schedule-info mt-3">
+                  <h4 class="h5">Broadcast Schedule</h4>
+                  <ul class="list-unstyled">
+                    <li>Monday-Friday: 6AM - 10PM</li>
+                    <li>Saturday-Sunday: 7AM - 11PM</li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    
+    <!-- Additional Info Section -->
+    <section class="radio-info-section container py-4" aria-labelledby="info-title">
+      <div class="row justify-content-center">
+        <div class="col-lg-8">
+          <div class="card">
+            <div class="card-body">
+              <h2 id="info-title" class="h4 card-title">About Radio Al-Fatah</h2>
+              <div class="card-text">
+                <p>Radio Al-Fatah Trangkil Temboro is a community radio station broadcasting a mix of religious programs, local news, and cultural content.</p>
+                <p>Our mission is to provide informative and entertaining content while preserving local traditions and values.</p>
+                
+                <h3 class="h5 mt-4">Contact Information</h3>
+                <address>
+                  <p>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="me-1" viewBox="0 0 16 16">
+                      <path d="M8 8a3 3 0 1 0 0-6 3 3 0 0 0 0 6zm2-3a2 2 0 1 1-4 0 2 2 0 0 1 4 0zm4 8c0 1-1 1-1 1H3s-1 0-1-1 1-4 6-4 6 3 6 4zm-1-.004c-.001-.246-.154-.986-.832-1.664C11.516 10.68 10.289 10 8 10c-2.29 0-3.516.68-4.168 1.332-.678.678-.83 1.418-.832 1.664h10z"/>
+                    </svg>
+                    Jl. Raya Trangkil, Temboro, Magetan
+                  </p>
+                  <p>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="me-1" viewBox="0 0 16 16">
+                      <path d="M3.654 1.328a.678.678 0 0 0-1.015-.063L1.605 2.3c-.483.484-.661 1.169-.45 1.77a17.568 17.568 0 0 0 4.168 6.608 17.569 17.569 0 0 0 6.608 4.168c.601.211 1.286.033 1.77-.45l1.034-1.034a.678.678 0 0 0-.063-1.015l-2.307-1.794a.678.678 0 0 0-.58-.122l-2.19.547a1.745 1.745 0 0 1-1.657-.459L5.482 8.062a1.745 1.745 0 0 1-.46-1.657l.548-2.19a.678.678 0 0 0-.122-.58L3.654 1.328zM1.884.511a1.745 1.745 0 0 1 2.612.163L6.29 2.98c.329.423.445.974.315 1.494l-.547 2.19a.678.678 0 0 0 .178.643l2.457 2.457a.678.678 0 0 0 .644.178l2.189-.547a1.745 1.745 0 0 1 1.494.315l2.306 1.794c.829.645.905 1.87.163 2.611l-1.034 1.034c-.74.74-1.846 1.065-2.877.702a18.634 18.634 0 0 1-7.01-4.42 18.634 18.634 0 0 1-4.42-7.009c-.362-1.03-.037-2.137.703-2.877L1.885.511z"/>
+                    </svg>
+                    +62 123 4567 890
+                  </p>
+                </address>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
     </section>
   </main>
   
-  <footer class="bg-dark text-white text-center py-3 mt-5 shadow-sm" role="contentinfo">
-    <p>© <time id="currentYear" datetime="2025">2025</time> Hamake D. Arayanai | All Rights Reserved | <a href="mailto:admin@hamakedarayanai.my.id" rel="nofollow">Contact</a></p>
+  <!-- Footer -->
+  <footer class="site-footer bg-dark text-white py-4 shadow-sm" role="contentinfo">
+    <div class="container text-center">
+      <p class="mb-2">© <time id="currentYear" datetime="2025">2025</time> Hamake D. Arayanai</p>
+      <p class="mb-0">All Rights Reserved | <a href="mailto:admin@hamakedarayanai.my.id" rel="nofollow" class="footer-link">Contact</a></p>
+    </div>
   </footer>
   
   <!-- JavaScript -->
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous" defer></script>
-  <script src="js/scripts.js" defer></script>
-  <script>
-    document.addEventListener('DOMContentLoaded', () => {
-      const audio = document.getElementById('radio-player');
-      const errorMessage = document.getElementById('audio-error');
+  <script src="js/radio.js" defer></script>
 
-      audio.addEventListener('error', (e) => {
-        errorMessage.style.display = 'block';
-        console.error('Audio streaming error:', e.target.error.message);
-      });
-
-      audio.addEventListener('playing', () => {
-        errorMessage.style.display = 'none';
-      });
-
-      audio.addEventListener('stalled', () => {
-        errorMessage.style.display = 'block';
-        errorMessage.textContent = 'Stream stalled. Please try refreshing the page.';
-      });
-    });
-  </script>
+  <!-- No-JS Fallback -->
+  <noscript>
+    <style>
+      .no-js-message {
+        position: fixed;
+        top: 0;
+        left: 0;
+        right: 0;
+        background-color: #f8d7da;
+        color: #721c24;
+        padding: 1rem;
+        text-align: center;
+        z-index: 9999;
+      }
+      .no-js-message a {
+        color: #721c24;
+        text-decoration: underline;
+      }
+    </style>
+    <div class="no-js-message">
+      <p>For full functionality of this radio player, please enable JavaScript. <a href="https://i.klikhost.com/8228/;stream.mp3">Direct stream link</a></p>
+    </div>
+  </noscript>
 </body>
 </html>

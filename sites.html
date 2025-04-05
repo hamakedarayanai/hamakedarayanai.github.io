@@ -1,43 +1,52 @@
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
 <head>
+  <!-- Primary Meta Tags -->
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="theme-color" content="#121212">
   <title>Sites | Hamake D. Arayanai</title>
   <meta name="description" content="Explore websites and online projects created by Hamake D. Arayanai, including Harapan Baru Service.">
-  <meta name="keywords" content="Hamake D. Arayanai, online projects, websites, portfolio, Harapan Baru Service">
   <meta name="author" content="Hamake D. Arayanai">
+
+  <!-- SEO Meta Tags -->
+  <meta name="keywords" content="Hamake D. Arayanai, online projects, websites, portfolio, Harapan Baru Service">
   <meta name="robots" content="index, follow">
-  
+  <link rel="canonical" href="https://hamakedarayanai.my.id/sites.html">
+
   <!-- Open Graph / Facebook -->
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://hamakedarayanai.my.id/sites.html">
   <meta property="og:title" content="Sites | Hamake D. Arayanai">
   <meta property="og:description" content="Discover online projects and websites by Hamake D. Arayanai, including Harapan Baru Service.">
-  <meta property="og:url" content="https://hamakedarayanai.my.id/sites.html">
-  <meta property="og:type" content="website">
-  <meta property="og:image" content="https://hamakedarayanai.my.id/img/favicon.png">
-  <meta property="og:image:alt" content="Hamake D. Arayanai website logo">
-  <meta property="og:locale" content="en_US">
-  
+  <meta property="og:image" content="https://hamakedarayanai.my.id/img/sites-social.jpg">
+  <meta property="og:image:alt" content="Hamake D. Arayanai projects showcase">
+
   <!-- Twitter -->
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:site" content="@hamakedarayanai">
   <meta name="twitter:creator" content="@hamakedarayanai">
-  
-  <!-- Favicon -->
-  <link rel="icon" type="image/png" href="img/favicon.png" sizes="32x32">
-  <link rel="apple-touch-icon" href="img/favicon.png">
-  
-  <!-- Preload critical resources -->
-  <link rel="preload" href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;700&display=swap" as="style">
+  <meta name="twitter:title" content="Sites | Hamake D. Arayanai">
+  <meta name="twitter:description" content="Discover online projects and websites by Hamake D. Arayanai, including Harapan Baru Service.">
+  <meta name="twitter:image" content="https://hamakedarayanai.my.id/img/sites-social.jpg">
+  <meta name="twitter:image:alt" content="Hamake D. Arayanai projects showcase">
+
+  <!-- Favicons -->
+  <link rel="icon" href="img/favicon.ico" sizes="any">
+  <link rel="icon" href="img/favicon.svg" type="image/svg+xml">
+  <link rel="apple-touch-icon" href="img/apple-touch-icon.png">
+
+  <!-- Preload Critical Resources -->
+  <link rel="preload" href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;700&display=swap" as="style" crossorigin>
   <link rel="preload" href="css/styles.css" as="style">
-  
+  <link rel="preload" href="js/sites.js" as="script">
+
   <!-- CSS -->
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
-  <link rel="preconnect" href="https://fonts.googleapis.com" crossorigin>
   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;700&display=swap" media="print" onload="this.media='all'">
   <link rel="stylesheet" href="css/styles.css">
-  
+  <link rel="stylesheet" href="css/sites.css">
+
   <!-- Structured Data -->
   <script type="application/ld+json">
   {
@@ -74,69 +83,189 @@
     }
   }
   </script>
-
-  <!-- Microsoft Clarity (async) -->
-  <script type="text/javascript" defer>
-    (function(c,l,a,r,i,t,y){
-      c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
-      t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;
-      y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
-    })(window, document, "clarity", "script", "ln7v9zp5ah");
-  </script>
 </head>
 <body class="dark-theme">
-  <a href="#main" class="visually-hidden-focusable">Skip to main content</a>
+  <!-- Skip to Content Link -->
+  <a id="skip-link" href="#main-content" class="visually-hidden-focusable">Skip to main content</a>
   
-  <header role="banner">
-    <nav class="navbar navbar-expand-lg navbar-dark bg-dark shadow-sm" role="navigation" aria-label="Main navigation">
+  <!-- Header -->
+  <header class="site-header" role="banner">
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark shadow-sm" aria-label="Main navigation">
       <div class="container">
-        <a class="navbar-brand fw-bold" href="/" aria-label="Hamake D. Arayanai Home">Hamake D. Arayanai</a>
-        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
-                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <a class="navbar-brand fw-bold" href="/" aria-label="Hamake D. Arayanai Home">
+          <span class="brand-text">Hamake D. Arayanai</span>
+        </a>
+        
+        <button class="navbar-toggler" type="button" 
+                data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                aria-controls="navbarNav" aria-expanded="false" 
+                aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
+          <span class="visually-hidden">Menu</span>
         </button>
+        
         <div class="collapse navbar-collapse" id="navbarNav">
           <ul class="navbar-nav ms-auto">
-            <li class="nav-item"><a class="nav-link" href="/">Home</a></li>
-            <li class="nav-item"><a class="nav-link" href="/pages.html">Pages</a></li>
-            <li class="nav-item"><a class="nav-link active" href="/sites.html" aria-current="page">Sites</a></li>
-            <li class="nav-item"><a class="nav-link" href="/bookmarks.html">Bookmarks</a></li>
+            <li class="nav-item">
+              <a class="nav-link" href="/">Home</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="/pages.html">Pages</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link active" href="/sites.html" aria-current="page">Sites</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="/bookmarks.html">Bookmarks</a>
+            </li>
           </ul>
         </div>
       </div>
     </nav>
   </header>
   
-  <main id="main" role="main">
-    <section class="hero-section text-center py-5" aria-labelledby="sites-title">
-      <div class="container">
-        <h1 id="sites-title">Explore Our Sites</h1>
+  <!-- Main Content -->
+  <main id="main-content" role="main">
+    <!-- Hero Section -->
+    <section class="sites-hero" aria-labelledby="sites-title">
+      <div class="container text-center py-5">
+        <h1 id="sites-title" class="display-4">Explore Our Sites</h1>
         <p class="lead">Discover online projects by Hamake D. Arayanai</p>
       </div>
     </section>
     
-    <section class="container text-center mt-5" aria-label="Project sites">
-      <h2 class="visually-hidden">Available Websites</h2>
-      <div class="row justify-content-center">
-        <div class="col-md-4 col-sm-6 mb-3">
-          <a href="http://harapanbaruservice.biz.id/" 
-             class="btn btn-outline-secondary w-100" 
-             target="_blank" 
-             rel="noopener noreferrer external" 
-             aria-label="Visit Harapan Baru Service website">Harapan Baru Service</a>
-          <p class="text-muted mt-2"><small>Professional service solutions</small></p>
+    <!-- Projects Grid -->
+    <section class="projects-grid container py-5" aria-labelledby="projects-title">
+      <h2 id="projects-title" class="visually-hidden">Project Websites</h2>
+      
+      <div class="row g-4">
+        <!-- Harapan Baru Service -->
+        <div class="col-md-6 col-lg-4">
+          <article class="project-card card h-100">
+            <div class="card-img-top">
+              <img src="img/harapan-baru-thumbnail.webp" 
+                   class="project-thumbnail" 
+                   alt="Harapan Baru Service website thumbnail" 
+                   loading="lazy"
+                   width="800"
+                   height="450">
+              <div class="project-badge">Featured</div>
+            </div>
+            <div class="card-body">
+              <h3 class="h5 card-title">Harapan Baru Service</h3>
+              <p class="card-text">Professional service solutions for your technical needs with reliable support and maintenance.</p>
+              <div class="project-meta">
+                <span class="project-category">Service Business</span>
+                <span class="project-year">2023</span>
+              </div>
+            </div>
+            <div class="card-footer bg-transparent">
+              <a href="http://harapanbaruservice.biz.id/" 
+                 class="btn btn-outline-primary w-100" 
+                 target="_blank" 
+                 rel="noopener noreferrer external"
+                 aria-label="Visit Harapan Baru Service website">
+                Visit Site
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="ms-2" viewBox="0 0 16 16">
+                  <path fill-rule="evenodd" d="M8.636 3.5a.5.5 0 0 0-.5-.5H1.5A1.5 1.5 0 0 0 0 4.5v10A1.5 1.5 0 0 0 1.5 16h10a1.5 1.5 0 0 0 1.5-1.5V7.864a.5.5 0 0 0-1 0V14.5a.5.5 0 0 1-.5.5h-10a.5.5 0 0 1-.5-.5v-10a.5.5 0 0 1 .5-.5h6.636a.5.5 0 0 0 .5-.5z"/>
+                  <path fill-rule="evenodd" d="M16 .5a.5.5 0 0 0-.5-.5h-5a.5.5 0 0 0 0 1h3.793L6.146 9.146a.5.5 0 1 0 .708.708L15 1.707V5.5a.5.5 0 0 0 1 0v-5z"/>
+                </svg>
+              </a>
+            </div>
+          </article>
         </div>
-        <!-- Add more sites here as needed -->
+        
+        <!-- Project Template (Add more projects like this) -->
+        <div class="col-md-6 col-lg-4">
+          <article class="project-card card h-100">
+            <div class="card-img-top">
+              <img src="img/project-coming-soon.webp" 
+                   class="project-thumbnail" 
+                   alt="Coming soon project placeholder" 
+                   loading="lazy"
+                   width="800"
+                   height="450">
+              <div class="project-badge">Coming Soon</div>
+            </div>
+            <div class="card-body">
+              <h3 class="h5 card-title">New Project</h3>
+              <p class="card-text">Exciting new project currently in development. Stay tuned for updates!</p>
+              <div class="project-meta">
+                <span class="project-category">Web Application</span>
+                <span class="project-year">2024</span>
+              </div>
+            </div>
+            <div class="card-footer bg-transparent">
+              <button class="btn btn-outline-secondary w-100" disabled aria-disabled="true">
+                Coming Soon
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="ms-2" viewBox="0 0 16 16">
+                  <path d="M8 1a7 7 0 1 0 0 14A7 7 0 0 0 8 1zm0 13V2a6 6 0 1 1 0 12z"/>
+                  <path d="M8 4a.5.5 0 0 1 .5.5v3.5a.5.5 0 0 1-1 0V4.5A.5.5 0 0 1 8 4z"/>
+                </svg>
+              </button>
+            </div>
+          </article>
+        </div>
+        
+        <!-- Add more project cards here -->
+      </div>
+    </section>
+    
+    <!-- Call to Action -->
+    <section class="cta-section container py-5 text-center" aria-labelledby="cta-title">
+      <div class="row justify-content-center">
+        <div class="col-lg-8">
+          <div class="cta-card card border-0">
+            <div class="card-body py-5">
+              <h2 id="cta-title" class="h3 mb-4">Have a project in mind?</h2>
+              <p class="lead mb-4">Let's collaborate on your next web project or digital solution.</p>
+              <a href="mailto:admin@hamakedarayanai.my.id" class="btn btn-primary btn-lg">
+                Get in Touch
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="ms-2" viewBox="0 0 16 16">
+                  <path d="M.05 3.555A2 2 0 0 1 2 2h12a2 2 0 0 1 1.95 1.555L8 8.414.05 3.555ZM0 4.697v7.104l5.803-3.558L0 4.697ZM6.761 8.83l-6.57 4.027A2 2 0 0 0 2 14h12a2 2 0 0 0 1.808-1.144l-6.57-4.027L8 9.586l-1.239-.757Zm3.436-.586L16 11.801V4.697l-5.803 3.546Z"/>
+                </svg>
+              </a>
+            </div>
+          </div>
+        </div>
       </div>
     </section>
   </main>
   
-  <footer class="bg-dark text-white text-center py-3 mt-5 shadow-sm" role="contentinfo">
-    <p>© <time id="currentYear" datetime="2025">2025</time> Hamake D. Arayanai | All Rights Reserved | <a href="mailto:admin@hamakedarayanai.my.id" rel="nofollow">Contact</a></p>
+  <!-- Footer -->
+  <footer class="site-footer bg-dark text-white py-4 shadow-sm" role="contentinfo">
+    <div class="container text-center">
+      <p class="mb-2">© <time id="currentYear" datetime="2025">2025</time> Hamake D. Arayanai</p>
+      <p class="mb-0">All Rights Reserved | <a href="mailto:admin@hamakedarayanai.my.id" rel="nofollow" class="footer-link">Contact</a></p>
+    </div>
   </footer>
   
   <!-- JavaScript -->
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous" defer></script>
-  <script src="js/scripts.js" defer></script>
+  <script src="js/sites.js" defer></script>
+
+  <!-- No-JS Fallback -->
+  <noscript>
+    <style>
+      .no-js-message {
+        position: fixed;
+        top: 0;
+        left: 0;
+        right: 0;
+        background-color: #f8d7da;
+        color: #721c24;
+        padding: 1rem;
+        text-align: center;
+        z-index: 9999;
+      }
+      .no-js-message a {
+        color: #721c24;
+        text-decoration: underline;
+      }
+    </style>
+    <div class="no-js-message">
+      <p>For full functionality of this site, please enable JavaScript.</p>
+    </div>
+  </noscript>
 </body>
 </html>
