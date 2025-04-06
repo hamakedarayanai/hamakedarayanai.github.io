@@ -127,17 +127,15 @@
                    pattern="^\+?[1-9]\d{7,14}$" 
                    required 
                    aria-describedby="phone-help">
-            <small id="phone-help" class="form-text text">Enter a valid international number (e.g., +62...)</small>
             <div class="form-error">Please enter a valid phone number (8-15 digits with optional + prefix).</div>
           </div>
           <div class="form-group mb-3">
-            <label for="message" class="form-label">Message (Optional)</label>
+            <label for="message" class="form-label">Message</label>
             <textarea id="message" name="message" class="form-control" 
                       placeholder="Type your message here..." 
                       rows="3" 
                       maxlength="500" 
                       aria-describedby="message-help"></textarea>
-            <small id="message-help" class="form-text text">Max 500 characters</small>
           </div>
           <button type="submit" class="btn btn-outline-secondary w-100" id="whatsapp-submit">Open WhatsApp Chat</button>
           <p id="form-error" class="form-error" style="display: none;">Error submitting form. Please try again later.</p>
