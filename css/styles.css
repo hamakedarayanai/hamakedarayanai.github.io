@@ -15,10 +15,7 @@
   --color-text: #f0f0f0;
   --color-text-muted: #b0b0b0;
   --color-border: #333;
-  --color-success: #4caf50;
   --color-error: #f44336;
-  --color-warning: #ff9800;
-  --color-info: #2196f3;
 
   /* Typography */
   --font-family: 'Poppins', system-ui, -apple-system, sans-serif;
@@ -47,7 +44,6 @@
   --shadow-sm: 0 1px 2px rgba(0, 0, 0, 0.25);
   --shadow-md: 0 4px 6px rgba(0, 0, 0, 0.3);
   --shadow-lg: 0 10px 15px rgba(0, 0, 0, 0.35);
-  --shadow-inner: inset 0 2px 4px rgba(0, 0, 0, 0.2);
 
   /* Transitions */
   --transition-duration: 0.2s;
@@ -55,10 +51,7 @@
   --transition-all: all var(--transition-duration) var(--transition-timing);
 
   /* Z-index */
-  --z-index-dropdown: 100;
   --z-index-sticky: 200;
-  --z-index-modal: 300;
-  --z-index-toast: 400;
 
   /* Audio player */
   --audio-player-height: 3rem;
@@ -147,10 +140,6 @@ a:focus-visible {
   font-weight: 300;
 }
 
-.text-muted {
-  color: var(--color-text-muted);
-}
-
 /* ================ */
 /* Layout           */
 /* ================ */
@@ -225,40 +214,6 @@ a:focus-visible {
 
 .btn-outline-secondary:active {
   transform: translateY(0);
-}
-
-/* Cards */
-.card {
-  display: flex;
-  flex-direction: column;
-  min-width: 0;
-  height: 100%;
-  background-color: var(--color-surface);
-  border: var(--border-width) solid var(--color-border);
-  border-radius: var(--border-radius-md);
-  box-shadow: var(--shadow-sm);
-  transition: var(--transition-all);
-  overflow: hidden;
-}
-
-.card:hover {
-  box-shadow: var(--shadow-md);
-  transform: translateY(-4px);
-}
-
-.card-body {
-  flex: 1 1 auto;
-  padding: var(--space-md);
-}
-
-.card-title {
-  margin-bottom: var(--space-sm);
-  color: var(--color-text);
-}
-
-.card-text {
-  margin-bottom: var(--space-md);
-  color: var(--color-text-muted);
 }
 
 /* Forms */
@@ -502,19 +457,6 @@ footer a:hover {
 
 .fade-in {
   animation: fadeIn 0.5s var(--transition-timing) forwards;
-}
-
-@keyframes pulse {
-  0%, 100% {
-    transform: scale(1);
-  }
-  50% {
-    transform: scale(1.05);
-  }
-}
-
-.pulse {
-  animation: pulse 2s infinite;
 }
 
 /* ================ */

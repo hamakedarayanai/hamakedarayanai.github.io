@@ -9,7 +9,6 @@ class Website {
       shrinkThreshold: 50,
       throttleDelay: 100,
       phoneRegex: /^\+?[1-9]\d{7,14}$/,
-      maxMessageLength: 500,
       lazyLoadRootMargin: '100px 0px',
       audioErrorMessages: {
         aborted: 'Playback was aborted.',
@@ -38,7 +37,6 @@ class Website {
     this.elements = {
       currentYear: document.getElementById('currentYear'),
       navbar: document.querySelector('.navbar'),
-      anchors: [].slice.call(document.querySelectorAll('a[href^="#"]')),
       forms: {
         whatsapp: document.getElementById('whatsappForm')
       },
@@ -55,7 +53,6 @@ class Website {
     try {
       // Core functionality
       this.updateFooterYear();
-      this.setupSmoothScrolling();
       this.setupNavbarEffects();
       this.setupLazyLoading();
       this.setupAudioPlayers();
@@ -92,9 +89,6 @@ class Website {
     );
     window.addEventListener('scroll', throttledScroll);
 
-    // Window load event
-    window.addEventListener('load', this.handleWindowLoad.bind(this));
-
     // Visibility change
     document.addEventListener(
       'visibilitychange',
@@ -118,45 +112,6 @@ class Website {
     } catch (error) {
       this.handleError('Footer Year Update', error);
     }
-  }
-
-  /**
-   * Setup smooth scrolling
-   */
-  setupSmoothScrolling() {
-    if (!this.elements.anchors.length) return;
-
-    const handleAnchorClick = (e) => {
-      try {
-        e.preventDefault();
-        const targetId = e.currentTarget.getAttribute('href');
-        const target = document.querySelector(targetId);
-
-        if (target) {
-          target.scrollIntoView({
-            behavior: 'smooth',
-            block: 'start'
-          });
-
-          // Update URL
-          if (history.pushState) {
-            history.pushState(null, null, targetId);
-          }
-
-          // Close mobile menu if open
-          const navbarToggler = document.querySelector('.navbar-toggler[aria-expanded="true"]');
-          if (navbarToggler) {
-            navbarToggler.click();
-          }
-        }
-      } catch (error) {
-        this.handleError('Smooth Scrolling', error);
-      }
-    };
-
-    this.elements.anchors.forEach(anchor => {
-      anchor.addEventListener('click', handleAnchorClick);
-    });
   }
 
   /**
@@ -397,14 +352,6 @@ class Website {
   }
 
   /**
-   * Handle window load
-   */
-  handleWindowLoad() {
-    document.documentElement.classList.add('loaded');
-    this.logPerformance();
-  }
-
-  /**
    * Handle visibility changes
    */
   handleVisibilityChange() {
@@ -431,20 +378,6 @@ class Website {
     this.elements.audioPlayers.forEach(player => {
       if (!player.paused) player.pause();
     });
-  }
-
-  /**
-   * Log performance metrics
-   */
-  logPerformance() {
-    if ('performance' in window) {
-      const perfData = {
-        loadTime: performance.now(),
-        memory: performance.memory?.usedJSHeapSize || null,
-        mediaElements: this.state.mediaElements.size
-      };
-      console.debug('Performance metrics:', perfData);
-    }
   }
 
   /**
@@ -480,7 +413,7 @@ class Website {
   }
 
   /**
-   * Show form error
+   * Show acquiesce error
    */
   showFormError(element, message) {
     if (element) {
