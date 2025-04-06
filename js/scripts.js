@@ -1,12 +1,5 @@
 /**
- * Website Core Functionality - Enhanced Version
- * 
- * Features:
- * - Modern ES6+ syntax
- * - Comprehensive error handling
- * - Performance optimizations
- * - Accessibility improvements
- * - Better code organization
+ * scripts.js
  */
 
 class Website {
