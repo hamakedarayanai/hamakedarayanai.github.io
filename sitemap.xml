@@ -24,14 +24,6 @@
     <priority>0.7</priority>
   </url>
   
-  <!-- WhatsApp Chat Form Page -->
-  <url>
-    <loc>https://hamakedarayanai.my.id/whatsappchatform.html</loc>
-    <lastmod>2025-04-06</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  
   <!-- Sites Page -->
   <url>
     <loc>https://hamakedarayanai.my.id/sites.html</loc>
